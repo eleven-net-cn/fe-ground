@@ -2,7 +2,7 @@
 title: FE-Ground
 order: 10
 hero:
-  title: FE-Ground
+  # title: FE-Ground
   desc: 通用的 `React` 组件库、自定义 `Hooks`及 `util` 函数
   actions:
     - text: 快速上手

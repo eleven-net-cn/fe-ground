@@ -6,7 +6,7 @@
 
 https://fe-ground.eleven.net.cn/
 
-## 技术架构
+## Technology
 
 - lerna + yarn workspaces 的 `monorepo` 多包结构 —— yarn workspaces 处理多包的依赖，其它的交给 lerna
 - [umijs dumi](https://d.umijs.org/zh-CN/) 集中编译所有包的 doc 文档、测试 demo
@@ -20,7 +20,7 @@ https://fe-ground.eleven.net.cn/
     - [Support for Yarn workspaces/monorepos](https://github.com/ds300/patch-package/issues/42)
     - [Thoughts on yarn workspaces support](https://github.com/ds300/patch-package/issues/132)
 
-## 运行命令
+## Command
 
 ```bash
 # 在 packages/ 目录下自动生成代码，开发新的 SDK 包可以一键完成
@@ -40,7 +40,7 @@ yarn lint               # 运行 eslint
 yarn lint:fix           # 运行 eslint fix
 ```
 
-## 目录
+## Project Dir
 
 ```bash
 ├── .umi/                 # umijs 缓存目录（dumi 文档工具基于 umijs 生态）
