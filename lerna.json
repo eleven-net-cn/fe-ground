@@ -1,0 +1,27 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "includeMergedTags": true,
+      "conventionalCommits": true
+    },
+    "publish": {
+      "ignoreChanges": ["docs/**", "dist_docs/**", "patches/**"],
+      "registry": "https://www.npmjs.com/"
+    }
+  },
+  "changelog": {
+    "labels": {
+      "pr(enhancement)": ":rocket: Enhancement",
+      "pr(bug)": ":bug: Bug Fix",
+      "pr(documentation)": ":book: Documentation",
+      "pr(dependency)": ":deciduous_tree: Dependency",
+      "pr(chore)": ":turtle: Chore"
+    },
+    "repo": "eleven-net-cn/fe-ground",
+    "cacheDir": ".changelog"
+  }
+}

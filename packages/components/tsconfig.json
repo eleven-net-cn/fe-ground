@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // babel 模式的临时处理方案
+    // https://github.com/umijs/father/issues/227#issuecomment-720928000
+    "typeRoots": ["./typings", "node_modules/@types"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "strict": true,
+    "declaration": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@@/*": ["src/.umi/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "typings",
+    "test",
+    "**/__test__",
+    "**/__tests__",
+    "**/demo",
+    "**/demos"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@e.fe/--library-name--",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "",
+  "keywords": [],
+  "author": "--username--",
+  "maintainers": [
+    "--username--"
+  ],
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "watch": "cd ../.. && PACKAGE=--library-name-- father-build --watch",
+    "build": "cd ../.. && PACKAGE=--library-name-- father-build",
+    "test": "umi-test",
+    "test:watch": "umi-test --watchAll",
+    "test:coverage": "umi-test --coverage",
+    "prepublishOnly": "yarn build",
+    "prepare": "cd .. && yarn patch-package"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.13.9"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "postinstall-prepare": "^2.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "dist"
+  ]
+}

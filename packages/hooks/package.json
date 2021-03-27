@@ -1,0 +1,49 @@
+{
+  "name": "@e.react/hooks",
+  "version": "1.0.0",
+  "description": "自定义 React Hooks",
+  "homepage": "https://fe-ground.eleven.net.cn/#/hooks/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-net-cn/fe-ground.git",
+    "directory": "packages/hooks"
+  },
+  "keywords": [],
+  "author": "Eleven <master@eleven.net.cn>",
+  "maintainers": [
+    "eleven.xi <master@eleven.net.cn>"
+  ],
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "watch": "cd ../.. && PACKAGE=hooks father-build --watch",
+    "build": "cd ../.. && PACKAGE=hooks father-build",
+    "test": "umi-test",
+    "test:watch": "umi-test --watchAll",
+    "test:coverage": "umi-test --coverage",
+    "prepublishOnly": "yarn build",
+    "prepare": "cd .. && yarn patch-package"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.13.7",
+    "ahooks": "^2.9.6"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "postinstall-prepare": "^2.0.0"
+  }
+}
