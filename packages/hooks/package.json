@@ -1,6 +1,6 @@
 {
   "name": "@e.react/hooks",
-  "version": "1.1.0",
+  "version": "0.0.0",
   "description": "自定义 React Hooks",
   "homepage": "https://fe-ground.eleven.net.cn/#/hooks/",
   "repository": {
@@ -45,5 +45,6 @@
   ],
   "devDependencies": {
     "postinstall-prepare": "^2.0.0"
-  }
+  },
+  "gitHead": "0ab89469b32716a1762b59a770b64f5411a2c46e"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@e.fe/utils",
-  "version": "1.1.0",
+  "version": "0.0.0",
   "description": "通用工具函数",
   "homepage": "https://fe-ground.eleven.net.cn/#/utils/",
   "repository": {
@@ -47,5 +47,6 @@
   ],
   "files": [
     "dist"
-  ]
+  ],
+  "gitHead": "0ab89469b32716a1762b59a770b64f5411a2c46e"
 }
