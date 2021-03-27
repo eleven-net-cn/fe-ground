@@ -1,6 +1,8 @@
 # FE-Ground
 
-通用的 React Component、React Hooks 及 util 函数，或独立的 SDK、xnpm 包。
+通用的 React 组件库、自定义 Hooks 及 util 函数
+
+## Documentation
 
 https://fe-ground.eleven.net.cn/
 
@@ -9,19 +11,14 @@ https://fe-ground.eleven.net.cn/
 - lerna + yarn workspaces 的 `monorepo` 多包结构 —— yarn workspaces 处理多包的依赖，其它的交给 lerna
 - [umijs dumi](https://d.umijs.org/zh-CN/) 集中编译所有包的 doc 文档、测试 demo
 - [umijs father-build](https://github.com/umijs/father) 独立编译各子包
-- gitlab pages 自动部署 doc 文档
 - [patch-package](https://github.com/ds300/patch-package) 调整 node_modules 包源码（因为给开源包贡献代码周期太长了）
 
   - 修改了 father-build（v1.19.1）的源码，调整 @babel/plugin-transform-runtime，增加 corejs 配置，以便自动导入 ES API 垫片（如：`includes()`、`Object.assign()` 等各类新 API 可直接使用，编译时会自动被导入垫片）
-
-  - 调整了 `@umijs/preset-dumi` 中关于 `gitlab` 链接协议，将源码中强制的 https 调整为 http
 
   - yarn workspaces 中使用 `patch-package` 的问题讨论：
 
     - [Support for Yarn workspaces/monorepos](https://github.com/ds300/patch-package/issues/42)
     - [Thoughts on yarn workspaces support](https://github.com/ds300/patch-package/issues/132)
-
-  > 若需升级 father-build 记得重新调整一遍源码，并运行 `yarn patch-package father-build` 更新。
 
 ## 运行命令
 
@@ -41,26 +38,7 @@ yarn build              # 打包所有 packages
 
 yarn lint               # 运行 eslint
 yarn lint:fix           # 运行 eslint fix
-
-yarn pub                # publish packages（发布所有变更的 package）
-yarn commit             # 交互式 commit message
 ```
-
-## 开发新的 package 或 SDK
-
-1. 运行命令 `yarn create-package` 自动初始化创建，
-
-   无需修改任何配置，直接下手写代码，完成后发布即可。
-
-2. 目录结构方面，你可以有多种选择
-
-   默认生成的是较为通用的目录结构，`__tests__` 单元测试目录和 `src` 目录是平级的，这是编写 SDK 较为常用的方式。
-
-   如果你的 SDK 代码结构是类似 `packages/components`、`packages/utils` 这种，内部的组件、函数相互独立，且数量众多，那么，推荐你参照 components、utils 目录的结构风格，略加修改即可。
-
-3. API 文档
-
-   如果需要编写的文档并不多，那么直接在 `src/README.md` 中编写即可，否则请参照阅读 dumi 的文档规则去编写。
 
 ## 目录
 
@@ -136,7 +114,6 @@ yarn commit             # 交互式 commit message
 ├── .eslintrc.js
 ├── .fatherrc.ts          # father-build 配置（会被子 package 中的 .fatherrc.ts 继承）
 ├── .gitignore
-├── .gitlab-ci.yml        # gitlab ci 配置文件（用于 gitlab pages 自动部署）
 ├── .prettierignore
 ├── .prettierrc
 ├── .umirc.ts             # 文档使用 dumi 编译、打包
