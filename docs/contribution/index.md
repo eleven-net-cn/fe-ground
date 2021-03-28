@@ -11,29 +11,6 @@ toc: menu
 
 > GitHub 仓库：https://github.com/eleven-net-cn/fe-ground
 
-## 基本要求
-
-贡献代码需要遵循以下若干原则：
-
-1. 复用性
-
-   代码需要有较好的复用价值
-
-2. 扩展性
-
-   代码需要考虑向下兼容，尽量减少将来迭代时有破坏性的升级
-
-3. 不重复造轮子
-
-   例如：[lodash](https://www.lodashjs.com/)、[futil](https://smartprocure.github.io/futil-js/)、[dayjs](https://dayjs.gitee.io/docs/zh-CN/installation/installation) 等社区资源已有的解决方案及 API，不建议再造一个
-
-4. 提供完整的 `Demo` 测试、`Jest` 单元测试、`API` 文档
-
-5. 编码风格统一、规范统一
-
-   - 请保持代码的命名（变量、文件、目录等）、目录结构等一致
-   - 请保持 `markdown` 文档的层级、标题、表格项等格式一致
-
 ## 开发调试
 
 1. 安装依赖
