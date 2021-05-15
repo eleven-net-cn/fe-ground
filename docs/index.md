@@ -8,13 +8,13 @@ hero:
     - text: 快速上手
       link: /guide
 features:
-  - icon: http://fdfs.xmcdn.com/storages/49e6-audiofreehighqps/93/E1/CMCoOSUEBjodAAA_LgCJkgPB.png
+  - icon: https://static.eleven.net.cn/images/icons/react_components.png
     title: Components
     desc: 可复用的 React 组件
-  - icon: http://fdfs.xmcdn.com/storages/1b83-audiofreehighqps/54/DB/CMCoOSMEBjreAAANEgCJklNS.png
+  - icon: https://static.eleven.net.cn/images/icons/react_hooks.png
     title: Hooks
     desc: 自定义 React Hooks
-  - icon: http://fdfs.xmcdn.com/storages/4538-audiofreehighqps/8D/72/CMCoOSAEBjotAAA53ACJkgpR.png
+  - icon: https://static.eleven.net.cn/images/icons/utils.png
     title: Utils
     desc: 通用工具函数
 footer: Powered by eleven-net-cn

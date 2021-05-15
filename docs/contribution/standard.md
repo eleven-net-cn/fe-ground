@@ -2,7 +2,7 @@
 order: 2
 nav:
   title: 贡献代码
-  order: 5
+  order: 99
 toc: menu
 ---
 

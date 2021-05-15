@@ -3,7 +3,7 @@ order: 1
 nav:
   title: 贡献代码
   path: /contribution
-  order: 5
+  order: 99
 toc: menu
 ---
 
