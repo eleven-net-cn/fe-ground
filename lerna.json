@@ -9,7 +9,8 @@
       "conventionalCommits": true
     },
     "publish": {
-      "ignoreChanges": ["docs/**", "dist_docs/**", "patches/**"],
+      "ignoreChanges": ["docs/**", "dist_docs/**", "patches/**", "scripts/**"],
+      "message": "chore: publish",
       "registry": "https://www.npmjs.com/"
     }
   },

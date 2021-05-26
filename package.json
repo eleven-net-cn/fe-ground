@@ -4,6 +4,11 @@
   "workspaces": [
     "packages/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-net-cn/fe-ground.git",
+    "branch": "master"
+  },
   "scripts": {
     "create-package": "node ./scripts/create-package.js",
     "docs:start": "dumi dev",
@@ -15,7 +20,7 @@
     "lint": "eslint \"packages/*/src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"packages/*/src/**/*.{ts,tsx}\"",
     "changelog": "lerna-changelog",
-    "pub": "yarn lint && yarn test && lerna publish -m \"chore: publish\"",
+    "pub": "yarn lint && yarn test && lerna publish",
     "commit": "git-cz",
     "postinstall": "patch-package"
   },
@@ -40,14 +45,13 @@
     "babel-plugin-styled-components": "^1.12.0",
     "chalk": "^4.1.0",
     "commitizen": "^4.2.3",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-lerna-changelog": "^2.0.3",
     "dumi": "^1.0.38",
     "eslint": "^7.20.0",
     "father-build": "^1.19.1",
     "figlet": "^1.5.0",
     "fs-extra": "^9.1.0",
     "gitmoji-cli": "^3.2.18",
-    "husky": "^4.3.8",
     "inquirer": "^8.0.0",
     "lerna": "^3.22.1",
     "lerna-changelog": "^1.0.1",
@@ -56,13 +60,12 @@
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "yorkie": "^2.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -E GIT_PARAMS"
   },
   "eslintConfig": {
     "extends": [
@@ -71,8 +74,11 @@
     ]
   },
   "lint-staged": {
-    "{packages,docs}/**/*.{js?(x),ts?(x),json,css,scss,less,html,md,yml}": [
+    "{packages,docs}/**/*.{js?(x),json,css,scss,less,html,md,yml}": [
       "prettier --write"
+    ],
+    "{packages,docs}/**/*.{ts?(x)}": [
+      "prettier --parser=typescript --write"
     ],
     "packages/*/src/**/*.{ts,tsx}": [
       "yarn lint:fix"
@@ -80,7 +86,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "cz-lerna-changelog"
     }
   },
   "commitlint": {
