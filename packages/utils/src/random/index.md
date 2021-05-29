@@ -7,6 +7,7 @@ nav:
 group:
   title: 常用
   path: /common
+mobile: false
 ---
 
 # random

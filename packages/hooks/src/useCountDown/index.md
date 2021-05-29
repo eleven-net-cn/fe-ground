@@ -7,6 +7,7 @@ nav:
 group:
   title: State
   path: /state
+mobile: false
 ---
 
 # useCountDown
