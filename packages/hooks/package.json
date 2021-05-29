@@ -1,6 +1,6 @@
 {
   "name": "@e.react/hooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "自定义 React Hooks",
   "homepage": "https://fe-ground.eleven.net.cn/#/hooks/",
   "repository": {
