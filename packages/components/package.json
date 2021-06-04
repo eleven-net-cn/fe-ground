@@ -20,7 +20,7 @@
   "scripts": {
     "watch": "cd ../.. && PACKAGE=components father-build --watch",
     "build": "cd ../.. && PACKAGE=components father-build",
-    "test": "umi-test",
+    "test": "umi-test -u",
     "test:watch": "umi-test --watchAll",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "yarn build",

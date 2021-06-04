@@ -15,7 +15,7 @@
     "docs:build": "dumi build",
     "watch": "father-build --watch",
     "build": "father-build",
-    "test": "umi-test",
+    "test": "umi-test -u",
     "test:coverage": "umi-test --coverage",
     "lint": "eslint \"packages/*/src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"packages/*/src/**/*.{ts,tsx}\"",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
+    "@commitlint/config-lerna-scopes": "^12.1.4",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/react-hooks": "^3.7.0",
@@ -92,7 +93,8 @@
   },
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional"
+      "@commitlint/config-conventional",
+      "@commitlint/config-lerna-scopes"
     ]
   }
 }
