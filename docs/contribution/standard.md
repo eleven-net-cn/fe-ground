@@ -10,100 +10,174 @@ toc: menu
 
 ## 目录结构
 
-在 `packages` 目录下，新增代码遵循相同的目录结构，如下方所示。
-
-#### `@e.react/components`
-
-`components` 组件开发，多了样式文件，与其它仅包含 JS 代码不同。
+`packages` 目录新增代码遵循相同的目录结构，如下所示，文件夹、文件的命名规范请参照注释或下方的“命名”。
 
 <Tree>
   <ul>
     <li>
-      __tests__
-      <small>jest 单元测试</small>
+      packages
       <ul>
         <li>
-          index.test.ts
-          <small>测试代码</small>
+          components
+            <ul>
+              <li>
+                src
+                <ul>
+                  <li>
+                    Foo
+                    <small>React 组件目录，推荐大驼峰，保持组件导出一致</small>
+                    <ul>
+                      <li>
+                        __tests__
+                        <small>jest 单元测试</small>
+                        <ul>
+                          <li>
+                            index.test.ts
+                            <small>测试代码</small>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        demos
+                        <small>测试 demo</small>
+                        <ul>
+                          <li>
+                            demo1.style.less
+                            <small>测试文件 1 的样式代码</small>
+                          </li>
+                          <li>
+                            demo1.tsx
+                            <small>测试文件 1</small>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        style
+                        <small>组件样式</small>
+                        <ul>
+                          <li>
+                            index.less
+                            <small>组件样式（less）</small>
+                            <small>特别说明：如果组件样式较少，在此书写样式即可；如果样式较多，推荐 index.less 作为入口，而拆分其它更多样式文件。</small>
+                          </li>
+                          <li>
+                            index.ts
+                            <small>组件样式入口（ts）—— 必须存在，即使组件没有样式代码</small>
+                            <small>特别说明：仅导入 index.less，不做其它事情，不可以在此书写 styled-components 代码</small>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        index.md
+                        <small>API 文档</small>
+                      </li>
+                      <li>
+                        index.ts
+                        <small>组件源码</small>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </li>
+        <li>
+          hooks
+          <ul>
+            <li>
+              src
+              <ul>
+                <li>
+                  useCountDown
+                  <small>React Hooks 目录，以 `use` 开头，小驼峰命名，保持与导出一致</small>
+                  <ul>
+                    <li>
+                      __tests__
+                      <small>jest 单元测试</small>
+                      <ul>
+                        <li>
+                          index.test.ts
+                          <small>测试代码</small>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      demos
+                      <small>测试 demo</small>
+                      <ul>
+                        <li>
+                          demo1.style.less
+                          <small>测试文件 1 的样式代码</small>
+                        </li>
+                        <li>
+                          demo1.tsx
+                          <small>测试文件 1</small>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      index.md
+                      <small>API 文档</small>
+                    </li>
+                    <li>
+                      index.ts
+                      <small>组件源码</small>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          utils
+          <ul>
+            <li>
+              src
+              <ul>
+                <li>
+                  compareVersion
+                  <small>Utils 函数目录，以小驼峰命名，保持与导出一致</small>
+                  <ul>
+                    <li>
+                      __tests__
+                      <small>jest 单元测试</small>
+                      <ul>
+                        <li>
+                          index.test.ts
+                          <small>测试代码</small>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      demos
+                      <small>测试 demo</small>
+                      <ul>
+                        <li>
+                          demo1.style.less
+                          <small>测试文件 1 的样式代码</small>
+                        </li>
+                        <li>
+                          demo1.tsx
+                          <small>测试文件 1</small>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      index.md
+                      <small>API 文档</small>
+                    </li>
+                    <li>
+                      index.ts
+                      <small>组件源码</small>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
       </ul>
-    </li>
-    <li>
-      demos
-      <small>测试 demo</small>
-      <ul>
-        <li>
-          demo1.style.less
-          <small>测试文件 1 的样式代码</small>
-        </li>
-        <li>
-          demo1.tsx
-          <small>测试文件 1</small>
-        </li>
-      </ul>
-    </li>
-    <li>
-      style
-      <small>组件样式</small>
-      <ul>
-        <li>
-          index.less
-          <small>组件样式入口（less）—— 如果有多个样式文件，统一从此入口收敛（样式较少时，通常直接在 index.less 书写样式即可）</small>
-        </li>
-        <li>
-          index.ts
-          <small>组件样式入口（ts）—— 必须存在，即使组件没有样式代码或使用 css-in-js 也要保留 index.ts</small>
-        </li>
-      </ul>
-    </li>
-    <li>
-      index.md
-      <small>API 文档</small>
-    </li>
-    <li>
-      index.ts
-      <small>组件源码</small>
-    </li>
-  </ul>
-</Tree>
-
-#### `@e.react/hooks`、`@e.fe/utils` 及其它
-
-其它仅包含 JS 代码，结构如下：
-
-<Tree>
-  <ul>
-    <li>
-      __tests__
-      <small>jest 单元测试</small>
-      <ul>
-        <li>
-          index.test.ts
-          <small>测试代码</small>
-        </li>
-      </ul>
-    </li>
-    <li>
-      demos
-      <small>测试 demo</small>
-      <ul>
-        <li>
-          demo1.style.less
-          <small>测试文件 1 的样式代码</small>
-        </li>
-        <li>
-          demo1.tsx
-          <small>测试文件 1</small>
-        </li>
-      </ul>
-    </li>
-    <li>
-      index.md
-      <small>API 文档</small>
-    </li>
-    <li>
-      index.ts
-      <small>组件源码</small>
     </li>
   </ul>
 </Tree>
@@ -112,13 +186,16 @@ toc: menu
 
 1. 文件夹命名
 
+   - 文件夹命名，一般推荐：统一小写字母、中划线连接，优先使用复数单词
    - `__tests__`、`demos`、`style` 目录名称不能更换，否则可能出现错误
-
-   - 其它自己需要的文件夹命名，统一小写字母、中划线连接，优先使用复数单词
+   - 特别的几个约定：
+     > components、hooks、utils 均是相对独立的单元，与真实导出的模块命名一致，达到保持见名知意的效果。
+     - components 目录的 React 组件，文件夹名使用大驼峰
+     - hooks 目录下的 React Hooks，文件夹名以 `use` 开头，小驼峰命名
+     - utils 目录下函数，文件夹名使用小驼峰
 
 2. 文件命名
 
-   - React 组件文件名使用大驼峰
    - 其它 `.ts`、`.js`、`.less` 等文件名称使用小写字母、中划线连接
    - demo 测试文件，名称统一使用：`demo1.tsx`、`demo1.style.less`
 

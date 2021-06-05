@@ -13,7 +13,7 @@ https://fe-ground.eleven.net.cn/
 - [umijs father-build](https://github.com/umijs/father) 独立编译各子包
 - [patch-package](https://github.com/ds300/patch-package) 调整 node_modules 包源码（因为给开源包贡献代码周期太长了）
 
-  - 修改了 father-build（v1.19.2）的源码，调整 @babel/plugin-transform-runtime，增加 corejs 配置，以便自动导入 ES API 垫片（如：`includes()`、`Object.assign()` 等各类新 API 可直接使用，编译时会自动被导入垫片）
+  - 修改了 father-build（v1.19.6）的源码，调整 @babel/plugin-transform-runtime，增加 corejs 配置，以便自动导入 ES API 垫片（如：`includes()`、`Object.assign()` 等各类新 API 可直接使用，编译时会自动被导入垫片）
 
   - yarn workspaces 中使用 `patch-package` 的问题讨论：
 
@@ -107,7 +107,7 @@ yarn lint:fix           # 运行 eslint fix
 │       ├── tsconfig.json
 │       └── typings.d.ts
 ├── patches/              # patch-package 修改 node_modules 包源码
-│   └── father-build+1.19.1.patch   # 修改 father-build v1.19.1 源码
+│   └── father-build+1.19.6.patch   # 修改 father-build 源码
 ├── scripts/              # node 脚本
 ├── .editorconfig
 ├── .eslintignore

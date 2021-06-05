@@ -15,7 +15,7 @@ toc: menu
 
 1. 安装依赖
 
-   项目是 `lerna` + `yarn workspaces` 多包结构，你只需要在根目录执行命令安装一次包即可（无需在子目录操作安装，也无需运行 `lerna bootstrap`）。
+   你只需要在根目录执行 yarn 命令安装即可（无需在子目录操作安装，也无需运行 `lerna bootstrap`）。
 
    ```bash
    yarn
@@ -43,7 +43,7 @@ toc: menu
 
 ## 依赖包管理
 
-`FE-Ground` 是 `lerna + yarn workspaces` 的多包结构，使用 [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces) 管理包依赖，推荐按如下方式操作：
+`FE-Ground` 是 `lerna + yarn workspaces` 的 monorepo 结构，使用 [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces) 管理包依赖，推荐按如下方式操作：
 
 1. 给单个 package 安装依赖
 
@@ -118,7 +118,7 @@ Demo 测试编写需要达到以下效果：
 
 ## API 文档编写
 
-组件、函数的 API 文档，最终会被 [dumi](https://d.umijs.org/zh-CN) 解析、编译，`.md` 文件头部可以定义若干参数，来控制文档的展示，如下：
+组件、函数的 API 文档，最终会被 [dumi](https://d.umijs.org/zh-CN) 解析、编译，`.md` 文件头部可以定义若干参数，来控制文档的展示，详细参数[点击查看](https://d.umijs.org/zh-CN/config/frontmatter)，常用参数如下：
 
 ```md
 ---
@@ -131,6 +131,8 @@ group:
   path: /自定义分组路由，注意，分组路由 = 导航路由 + 自己
   title: 自定义分组名称
   order: 控制分组顺序，数字越小越靠前，默认以路径长度和字典序排序
+mobile: 控制是否以 mobile 主题呈现文档
+toc: 锚点导航
 ---
 
 <!-- 其他 Markdown 内容 -->
@@ -141,6 +143,48 @@ group:
 1. 文档中的标题，按照 `#`、`##`、`####`、`######` 逐渐递增（字号逐渐递减）。
 2. 必须包含 `API`、`参数`、`返回值` 3 项，详细描述入参、返回。
 3. 参数、返回值、类型的展示以表格形式，表格项请参照现有示例。
+
+## 自动生成 Component API 文档
+
+dumi 依靠类型解析工具 `react-docgen-typescript`，可以自动生成 API 文档表格。
+
+你需要这样书写 TypeScript 类型定义
+
+```tsx | pure
+import React from 'react';
+
+export interface IHelloProps {
+  /**
+   * 可以这样写属性描述
+   * @description       也可以显式加上描述名
+   * @description.zh-CN 还支持不同的 locale 后缀来实现多语言描述
+   * @default           支持定义默认值
+   */
+  className?: string; // 支持识别 TypeScript 可选类型为非必选属性
+}
+
+const Hello: React.FC<IHelloProps> = () => <>Hello World!</>;
+
+export default Hello;
+```
+
+在 markdown 文档中引用
+
+```md
+<!-- 不传递 src 将自动探测当前组件，比如 src/Hello/index.md 将会识别 src/Hello/index.tsx -->
+
+<API></API>
+
+<!-- 传递 src 将显式指明渲染哪个组件的 API -->
+
+<API src="/path/to/your/component.tsx"></API>
+
+<!-- 传递 exports 将显式指明渲染哪些导出，请确保值为合法的 JSON 字符串 -->
+
+<API exports='["default", "Other"]'></API>
+```
+
+详细介绍 ☞ [点击查看](https://d.umijs.org/zh-CN/guide/advanced#%E7%BB%84%E4%BB%B6-api-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)
 
 ## Components 样式
 
