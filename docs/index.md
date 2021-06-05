@@ -5,7 +5,7 @@ hero:
   # title: FE-Ground
   desc: 通用的 `React` 组件库、自定义 `Hooks`及 `util` 函数
   actions:
-    - text: 快速开始
+    - text: 立即使用
       link: /guide
 features:
   - icon: https://static.eleven.net.cn/images/icons/react_components.png
