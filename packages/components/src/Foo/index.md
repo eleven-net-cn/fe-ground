@@ -7,6 +7,7 @@ nav:
 group:
   title: 布局
   path: /layout
+toc: false
 ---
 
 # Foo

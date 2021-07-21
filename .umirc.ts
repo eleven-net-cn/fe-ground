@@ -40,7 +40,11 @@ export default defineConfig({
     null,
     {
       title: 'GitHub',
-      path: 'https://github.com/eleven-net-cn',
+      path: 'https://github.com/eleven-net-cn/fe-ground',
+    },
+    {
+      title: '问题反馈',
+      path: 'https://github.com/eleven-net-cn/fe-ground/issues',
     },
   ],
   extraBabelPlugins: [

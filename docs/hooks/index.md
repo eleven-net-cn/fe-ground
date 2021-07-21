@@ -6,4 +6,4 @@ nav:
   path: /hooks
 ---
 
-<embed src="../packages/hooks/README.md" />
+<embed src="../../packages/hooks/README.md" />

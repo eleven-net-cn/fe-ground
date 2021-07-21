@@ -6,4 +6,4 @@ nav:
   path: /utils
 ---
 
-<embed src="../packages/utils/README.md" />
+<embed src="../../packages/utils/README.md" />

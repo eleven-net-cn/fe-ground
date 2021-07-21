@@ -6,4 +6,4 @@ nav:
   path: /components
 ---
 
-<embed src="../packages/components/README.md" />
+<embed src="../../packages/components/README.md" />

@@ -206,3 +206,9 @@ export default Hello;
 
 > 组件库编译后，`style/index.ts` 将被编译为 `es/**/style/index.js`、`lib/**/style/index.js`，插件 `babel-plugin-import` 在按需加载过程中会使用到。  
 > 因此，无论是否有 `less`、`css` 样式，无论是否使用 `styled-components` 编写样式代码，都必须保留 `style/index.ts`。
+
+## 更新日志
+
+系统会根据 commit message 自动生成 `CHANGELOG.md`，因此，请注意书写简洁、清晰。
+
+请始终通过 `yarn commit` 命令提交代码，按照交互提示输入，标准的 commit message 将有助于生成美观、完整的更新日志。
