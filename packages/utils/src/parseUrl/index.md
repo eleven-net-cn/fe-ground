@@ -20,13 +20,13 @@ mobile: false
 import { parseUrl } from '@xmly/hi-utils';
 
 const url =
-  'https://pages.ximalaya.com/mkt/act/cfb855beeaed9ebc?test=abc&hello=world#zvyr-dqE9-';
+  'https://www.google.com/cfb855beeaed9ebc?test=abc&hello=world#zvyr-dqE9-';
 const query = parseUrl(url);
 
 console.log('query: ', query);
 
 // {
-//   url: 'https://pages.ximalaya.com/mkt/act/cfb855beeaed9ebc',
+//   url: 'https://www.google.com/cfb855beeaed9ebc',
 //   search: 'test=abc&hello=world',
 //   query: { test: 'abc', hello: 'world' },
 //   hash: 'zvyr-dqE9-',
