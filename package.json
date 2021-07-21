@@ -21,7 +21,6 @@
     "lint:fix": "eslint --fix \"packages/*/src/**/*.{ts,tsx}\"",
     "changelog": "lerna-changelog",
     "pub": "yarn lint && yarn test && lerna publish",
-    "pub:from-git": "lerna publish from-git",
     "commit": "git-cz",
     "postinstall": "patch-package"
   },
