@@ -29,15 +29,11 @@ yarn create-package     # 自动初始化创建新的 package
 yarn docs:start         # 启动文档调试、测试 demo
 yarn docs:build         # 打包文档、测试 demo
 
-
 yarn test               # 运行所有 packages jest test
 yarn test:coverage      # 查看所有 packages 测试覆盖率
 
 yarn watch              # 监听所有 packages 编译
 yarn build              # 打包所有 packages
-
-yarn lint               # 运行 eslint
-yarn lint:fix           # 运行 eslint fix
 ```
 
 ## 目录
