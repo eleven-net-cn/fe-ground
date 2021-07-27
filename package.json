@@ -81,7 +81,7 @@
       "prettier --parser=typescript --write"
     ],
     "packages/*/src/**/*.{ts,tsx}": [
-      "yarn lint:fix"
+      "eslint --fix"
     ]
   },
   "config": {
