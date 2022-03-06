@@ -26,3 +26,6 @@ packages/components/lib
 # jest test coverage
 coverage
 __snapshots__
+
+# gitpot
+.gitpod.yml
