@@ -2,7 +2,7 @@
 
 通用的 React 组件库、React Hooks 及 Utils 函数库
 
-标准的 Lerna Monorepo TypeScript 结构，支持 React 组件库、React Hooks 类库以及其它更多 TS 类库开发，可直接从 Template 创建自己的项目。
+标准的 Lerna Monorepo TypeScript 结构，支持 React 组件库、React Hooks 类库以及其它更多 TyepScript 类库开发，可直接从 Template 创建自己的项目。
 
 ## Documentation
 
