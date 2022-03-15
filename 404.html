@@ -11,7 +11,7 @@
       type="image/x-icon"
       href="https://avatars.githubusercontent.com/u/20358391"
     />
-    <link rel="stylesheet" href="//fe-ground.eleven.net.cn/umi.4655d1e5.css" />
+    <link rel="stylesheet" href="//fe-ground.eleven.net.cn/umi.8aa7777f.css" />
     <script>
       window.routerBase = "/";
     </script>
@@ -25,7 +25,7 @@
           r = ["light", "dark", "auto"];
         document.documentElement.setAttribute(
           "data-prefers-color",
-          e === r[2] ? (t ? r[1] : r[0]) : r.includes(e) ? e : r[0]
+          e === r[2] ? (t ? r[1] : r[0]) : r.indexOf(e) > -1 ? e : r[0]
         );
       })();
     </script>
@@ -33,6 +33,6 @@
   <body>
     <div id="root"></div>
 
-    <script src="//fe-ground.eleven.net.cn/umi.e2c1a770.js"></script>
+    <script src="//fe-ground.eleven.net.cn/umi.10f461cf.js"></script>
   </body>
 </html>
