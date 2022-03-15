@@ -73,13 +73,13 @@
     ]
   },
   "lint-staged": {
-    "{packages,docs}/**/*.{js?(x),json,css,scss,less,html,md,yml}": [
+    "{packages,docs}/**/*.{js,jsx,json,css,scss,less,html,md,yml}": [
       "prettier --write"
     ],
-    "{packages,docs}/**/*.{ts?(x)}": [
+    "{packages,docs}/**/*.{ts,tsx}": [
       "prettier --parser=typescript --write"
     ],
-    "packages/*/src/**/*.{ts?(x)}": [
+    "packages/*/src/**/*.{ts,tsx}": [
       "eslint --fix --max-warnings 0"
     ]
   },
