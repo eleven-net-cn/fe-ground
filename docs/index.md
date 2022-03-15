@@ -58,6 +58,6 @@ import { random } from '@e.fe/utils'
 
 ## 快速开发
 
-运行 `yarn run create` 命令，一键生成基础代码，你可以立即参与开发、贡献代码。
+运行 `yarn run create` 命令，一键生成基础代码，立即开始开发。
 
-![create react component](https://imagev2.xmcdn.com/storages/2ac8-audiofreehighqps/BA/0A/CKwRIRwFBLKeACWo_gDeiKNp.gif)
+![create react component](https://imagev2.xmcdn.com/storages/d01d-audiofreehighqps/18/D2/GMCoOSUGBifjABAAAAEqPXtl.gif)
