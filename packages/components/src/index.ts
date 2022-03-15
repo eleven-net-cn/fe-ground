@@ -2,4 +2,4 @@
 /* eslint-disable-next-line @typescript-eslint/triple-slash-reference */
 /// <reference path="../typings/index.d.ts" />
 
-export { default as Foo } from './Foo';
+export { default as LayoutPercent } from './LayoutPercent';

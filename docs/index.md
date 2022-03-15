@@ -29,7 +29,7 @@ yarn add @e.react/components
 npm i @e.react/components
 
 # Example
-import { Foo } from '@e.react/components'
+import { LayoutPercent } from '@e.react/components'
 ```
 
 #### React Hooks

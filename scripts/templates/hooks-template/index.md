@@ -12,8 +12,6 @@ mobile: false
 
 # __name__
 
-<Badge>Author: __author__</Badge>
-
 hooks 基本介绍...
 
 ## 基本用法

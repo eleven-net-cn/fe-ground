@@ -102,14 +102,8 @@ inquirer
         return true;
       },
     },
-    {
-      type: 'input',
-      name: 'author',
-      message: '请输入 Author（中英文皆可，用于自动添加 Author 标签）：',
-      default: userNameGit,
-    },
   ])
-  .then(async ({ template, name, author }) => {
+  .then(async ({ template, name }) => {
     const libraries = ['component', 'hooks', 'util'];
     const setting = SETTINGS[template];
     const dirTpl = setting.tplDir;
@@ -173,12 +167,11 @@ inquirer
       files: [path.resolve(__dirname, '..', dirTarget, '**/*'), ...entries],
       from: [
         /__name__/g,
-        /__author__/g,
         /__username__/g,
         /__usermail__/g,
         /__xnpmuser__/g,
       ],
-      to: [name, author, userNameGit, userMailGit, userNameXnpm],
+      to: [name, userNameGit, userMailGit, userNameXnpm],
       ignore: ['**/node_modules/**'],
     });
 

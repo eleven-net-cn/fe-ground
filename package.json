@@ -42,8 +42,8 @@
     "commitizen": "^4.2.3",
     "cz-lerna-changelog": "^2.0.3",
     "dayjs": "^1.10.4",
-    "dumi": "^1.0.38",
-    "dumi-theme-mobile": "^1.1.1",
+    "dumi": "^1.1.39",
+    "dumi-theme-mobile": "^1.1.22",
     "eslint": "^7.20.0",
     "father-build": "^1.19.6",
     "figlet": "^1.5.0",
@@ -63,7 +63,7 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged",
+    "pre-commit": "lint-staged --allow-empty",
     "commit-msg": "commitlint -E GIT_PARAMS"
   },
   "eslintConfig": {
@@ -79,7 +79,7 @@
     "{packages,docs}/**/*.{ts?(x)}": [
       "prettier --parser=typescript --write"
     ],
-    "packages/*/src/**/*.{ts,tsx}": [
+    "packages/*/src/**/*.{ts?(x)}": [
       "eslint --fix --max-warnings 0"
     ]
   },
@@ -93,5 +93,6 @@
       "@commitlint/config-conventional",
       "@commitlint/config-lerna-scopes"
     ]
-  }
+  },
+  "dependencies": {}
 }

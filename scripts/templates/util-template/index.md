@@ -12,8 +12,6 @@ mobile: false
 
 # __name__
 
-<Badge>Author: __author__</Badge>
-
 函数基本介绍...
 
 ## 基本用法

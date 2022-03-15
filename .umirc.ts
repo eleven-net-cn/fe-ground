@@ -4,7 +4,7 @@
  * @Author: Eleven
  * @Date: 2020-12-10 09:42:36
  * @Last Modified by: Eleven
- * @Last Modified time: 2021-03-27 15:03:39
+ * @Last Modified time: 2022-03-15 16:58:49
  */
 
 import { defineConfig } from 'dumi';
@@ -57,5 +57,31 @@ export default defineConfig({
       },
       'antd',
     ],
+    [
+      'babel-plugin-import',
+      {
+        libraryName: '@e.react/components',
+        libraryDirectory: 'es',
+        camel2DashComponentName: false,
+        style: true,
+      },
+      '@e.react/components',
+    ],
   ],
+  theme: {
+    // theme config:
+    // https://github.com/umijs/dumi/blob/master/packages/theme-default/src/style/variables.less
+    // '@c-primary': '#1DA57A',
+  },
+  themeConfig: {
+    carrier: 'fe-ground',
+    // hd: {
+    //   // 根据不同的设备屏幕宽度断点切换高清方案
+    //   rules: [
+    //     { maxWidth: 375, mode: 'vw', options: [100, 750] },
+    //     { minWidth: 376, maxWidth: 750, mode: 'vw', options: [100, 1500] },
+    //   ],
+    //   // 更多 rule 配置访问 https://github.com/umijs/dumi/blob/master/packages/theme-mobile/src/typings/config.d.ts#L7
+    // },
+  },
 });

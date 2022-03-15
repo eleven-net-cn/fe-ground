@@ -2543,7 +2543,7 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
-"@mapbox/hast-util-to-jsx@^1.0.0":
+"@mapbox/hast-util-to-jsx@1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@mapbox/hast-util-to-jsx/-/hast-util-to-jsx-1.0.0.tgz#90ce46b0d2dde42d5ea4d4a1e0b26b9ce2215013"
   integrity sha512-HJRp3qkr0uGIBFASzA8rVATLo6y/UoOMoD8eXsG8HVofk5Dokc9PV+dh266zYLZniYgtpJbc2+AKf1fNpsVqAA==
@@ -3585,17 +3585,17 @@
     react-router-dom "5.2.0"
     regenerator-runtime "0.13.5"
 
-"@umijs/preset-dumi@1.1.18":
-  version "1.1.18"
-  resolved "https://registry.npmjs.org/@umijs/preset-dumi/-/preset-dumi-1.1.18.tgz#122740926fff0b3028dbaad2157cb597344ebb48"
-  integrity sha512-3G1RmOZP6YFw9dWza/RoXnlMZlrCjhUPftuQpjAe2EcpqrZ8J7jI1CSeCuINARY6+mTCQ65R/JS0RgNundhRvA==
+"@umijs/preset-dumi@1.1.39":
+  version "1.1.39"
+  resolved "https://registry.npmjs.org/@umijs/preset-dumi/-/preset-dumi-1.1.39.tgz#ff8021bef177ee6d0a64151cb96cca545f53149c"
+  integrity sha512-CMDl5NzyLP1W3JkveJL9aiqT2/F/kZ1oBaPwwM3RhH61xW7zgbPlD1mGYTJ9K5S9WXOJBQBf/5QeM58lhrb0WA==
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/generator" "^7.7.2"
     "@babel/plugin-transform-modules-commonjs" "^7.7.2"
     "@babel/traverse" "^7.7.2"
     "@babel/types" "^7.7.2"
-    "@mapbox/hast-util-to-jsx" "^1.0.0"
+    "@mapbox/hast-util-to-jsx" "1.0.0"
     "@umijs/babel-preset-umi" "3.x"
     "@umijs/plugin-analytics" "^0.2.2"
     "@umijs/runtime" "^3.2.14"
@@ -3604,7 +3604,7 @@
     copy-text-to-clipboard "^2.2.0"
     deepmerge "^4.2.2"
     dumi-assets-types "1.0.0"
-    dumi-theme-default "1.1.1"
+    dumi-theme-default "1.1.21"
     enhanced-resolve "^4.1.1"
     github-slugger "^1.3.0"
     hast-util-has-property "^1.0.4"
@@ -3613,9 +3613,11 @@
     hast-util-to-html "^7.1.1"
     hast-util-to-string "^1.0.2"
     hosted-git-info "^3.0.2"
+    ignore "^5.1.8"
     js-yaml "^3.13.1"
+    lodash.throttle "^4.1.1"
     lz-string "^1.4.4"
-    react-docgen-typescript "^1.20.5"
+    react-docgen-typescript-dumi-tmp "^1.22.1-0"
     rehype-autolink-headings "^4.0.0"
     rehype-mathjax "^3.1.0"
     rehype-remove-comments "^4.0.2"
@@ -5031,9 +5033,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000971, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001166, caniuse-lite@^1.0.30001179, caniuse-lite@^1.0.30001219:
-  version "1.0.30001230"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001230.tgz#8135c57459854b2240b57a4a6786044bdc5a9f71"
-  integrity sha512-5yBd5nWCBS+jWKTcHOzXwo5xzcj4ePE/yjtkZyUV1BTUmrBaA9MRGC+e7mxnqXSA90CmCA8L3eKLaSUkt099IQ==
+  version "1.0.30001317"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001317.tgz"
+  integrity sha512-xIZLh8gBm4dqNX0gkzrBeyI86J2eCjWzYAs40q88smG844YIrN4tVQl/RhquHvKEKImWWFIVh1Lxe5n1G/N+GQ==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -6622,32 +6624,35 @@ dumi-assets-types@1.0.0:
   resolved "https://registry.npmjs.org/dumi-assets-types/-/dumi-assets-types-1.0.0.tgz#d5368cb11045b203bf1ef1080e553b2287a2ec81"
   integrity sha512-7nhSeWM15vybbUAMPLZsdls2jKoHB2UU4P1RM6kLPucuS8eC/HSmufquFqTTYtX4oIDLHGtil/dVtMreNGwhdA==
 
-dumi-theme-default@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/dumi-theme-default/-/dumi-theme-default-1.1.1.tgz#cfd9fcf93045a2e2469dce407a05616be9c7c8a5"
-  integrity sha512-yn2oA+opZpGW9s1FKtLI2JQBkULRx/KzGdUh36bXKcDC7+QUxzYF1HXaNNu4jL+/Y0F4lqHuzEsif5VPjh4ZDg==
+dumi-theme-default@1.1.21:
+  version "1.1.21"
+  resolved "https://registry.npmjs.org/dumi-theme-default/-/dumi-theme-default-1.1.21.tgz#2dce486ea4f7b76b9ad1d8b3ccdbdefafd3f67f7"
+  integrity sha512-lh3lV9GnfJhh48Sb9YMlnSBd3da8O/Qs9QfbnoQI+9paDp5P5hLO9O+UJB8skojSSzdxsXiW6VALoHgBC8NGow==
   dependencies:
+    lodash.throttle "^4.1.1"
     prism-react-renderer "^1.1.1"
     prismjs "^1.21.0"
+    rc-motion "^2.4.1"
     rc-tabs "^11.7.1"
+    rc-tree "^5.2.0"
 
-dumi-theme-mobile@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/dumi-theme-mobile/-/dumi-theme-mobile-1.1.1.tgz#397f4c43afccad56719885e3cdd8d635e89fffe7"
-  integrity sha512-bxlIRH9VVN1FFTzuLrQuhlK2Pv6Ff3athi03HcB5VWoLkY1TuPNXlMRQnUh9kIOvEHV+PFFmwPezEKA6m/rtNQ==
+dumi-theme-mobile@^1.1.22:
+  version "1.1.22"
+  resolved "https://registry.npmjs.org/dumi-theme-mobile/-/dumi-theme-mobile-1.1.22.tgz#e1412ea30217041d4ff59f6b66958278015516c9"
+  integrity sha512-Z9886E5Xt4bdJXEOUZPtAYFB0stqkPOzSjwiESfeAkfKR/XvALbb3HgE9grjJstpIkM5O0Q7CCmuAajg2njdCA==
   dependencies:
-    dumi-theme-default "1.1.1"
+    dumi-theme-default "1.1.21"
     f2-touchemulator "^0.0.1"
     lodash.debounce "^4.0.8"
     qrcode.react "^1.0.0"
     umi-hd "^5.0.1"
 
-dumi@^1.0.38:
-  version "1.1.18"
-  resolved "https://registry.npmjs.org/dumi/-/dumi-1.1.18.tgz#2ed4eb2797753f5dc35ce9033d683280a4e2860e"
-  integrity sha512-x3biGoYYBcCfQWYt9WPRjeFI+p7XOw8NpvApQJHLiWL7thErmwXhpby8XoYGtbasp63IBnY/dNuXrSCBUGMRkw==
+dumi@^1.1.39:
+  version "1.1.39"
+  resolved "https://registry.npmjs.org/dumi/-/dumi-1.1.39.tgz#7c5f3f975666576ee483f03d81f7d41278185140"
+  integrity sha512-Lq4doyMrZHy4RWefdbnbIoKDjEDwsxfJHmpFnchGO/RptkIeuJm/JGj8TOaprx4eHgDzoU1rmI06F1zz3qboZw==
   dependencies:
-    "@umijs/preset-dumi" "1.1.18"
+    "@umijs/preset-dumi" "1.1.39"
     umi "^3.0.0"
 
 duplexer2@0.0.2:
@@ -13761,7 +13766,16 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.0:
+  version "15.8.1"
+  resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -14088,6 +14102,15 @@ rc-motion@^2.0.0, rc-motion@^2.0.1, rc-motion@^2.2.0, rc-motion@^2.3.0, rc-motio
     classnames "^2.2.1"
     rc-util "^5.2.1"
 
+rc-motion@^2.4.1:
+  version "2.4.6"
+  resolved "https://registry.npmjs.org/rc-motion/-/rc-motion-2.4.6.tgz#b9e07391927fb7bc14e62dcd839146958db6b2ef"
+  integrity sha512-nXIHve2EDQZ8BFHfgJI3HYMMOZ7HGsolCfA9ozP99/gc1UqpgKys1TYrQWdXa2trff0V3JLhgn2zz+w9VsyktA==
+  dependencies:
+    "@babel/runtime" "^7.11.1"
+    classnames "^2.2.1"
+    rc-util "^5.19.2"
+
 rc-notification@~4.5.2:
   version "4.5.6"
   resolved "https://registry.npmjs.org/rc-notification/-/rc-notification-4.5.6.tgz#5acb7b411d4e539505977f6877877e0637b9ece2"
@@ -14261,6 +14284,17 @@ rc-tree@^4.0.0, rc-tree@~4.1.0:
     rc-util "^5.0.0"
     rc-virtual-list "^3.0.1"
 
+rc-tree@^5.2.0:
+  version "5.4.4"
+  resolved "https://registry.npmjs.org/rc-tree/-/rc-tree-5.4.4.tgz#2ea3663ad3c566aef79a46ba6a1e050d24323e01"
+  integrity sha512-2qoObRgp31DBXmVzMJmo4qmwP20XEa4hR3imWQtRPcgN3pmljW3WKFmZRrYdOFHz7CyTnRsFZR065bBkIoUpiA==
+  dependencies:
+    "@babel/runtime" "^7.10.1"
+    classnames "2.x"
+    rc-motion "^2.0.1"
+    rc-util "^5.16.1"
+    rc-virtual-list "^3.4.2"
+
 rc-trigger@^5.0.0, rc-trigger@^5.0.4, rc-trigger@^5.1.2, rc-trigger@^5.2.1:
   version "5.2.8"
   resolved "https://registry.npmjs.org/rc-trigger/-/rc-trigger-5.2.8.tgz#27c8291c24518b8f11d76c848f5424e0c429e94a"
@@ -14290,10 +14324,28 @@ rc-util@^5.0.0, rc-util@^5.0.1, rc-util@^5.0.5, rc-util@^5.0.6, rc-util@^5.0.7, 
     react-is "^16.12.0"
     shallowequal "^1.1.0"
 
+rc-util@^5.16.1, rc-util@^5.19.2:
+  version "5.19.3"
+  resolved "https://registry.npmjs.org/rc-util/-/rc-util-5.19.3.tgz#5f6aa854820f6d5824451d80771035b013eaf6d8"
+  integrity sha512-S28epi9E2s7Nir05q8Ffl3hzDLwkavTGi0PGH1cTqCmkpG1AeBEuZgQDpksYeU6IgHcds5hWIPE5PUcdFiZl8w==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    react-is "^16.12.0"
+    shallowequal "^1.1.0"
+
 rc-virtual-list@^3.0.1, rc-virtual-list@^3.2.0:
   version "3.2.6"
   resolved "https://registry.npmjs.org/rc-virtual-list/-/rc-virtual-list-3.2.6.tgz#2c92a40f4425e19881b38134d6bd286a11137d2d"
   integrity sha512-8FiQLDzm3c/tMX0d62SQtKDhLH7zFlSI6pWBAPt+TUntEqd3Lz9zFAmpvTu8gkvUom/HCsDSZs4wfV4wDPWC0Q==
+  dependencies:
+    classnames "^2.2.6"
+    rc-resize-observer "^1.0.0"
+    rc-util "^5.0.7"
+
+rc-virtual-list@^3.4.2:
+  version "3.4.4"
+  resolved "https://registry.npmjs.org/rc-virtual-list/-/rc-virtual-list-3.4.4.tgz#be42832edecdcffc56260df131e437a2e0473bca"
+  integrity sha512-Zb2h0B+ZhA/aysZNEUkQYaqx0hd8hq7WMIUegII+1KfFjh99GtHZ4ZMWB+SlpdVadskKJZzUWWzIq5N1mE6AVg==
   dependencies:
     classnames "^2.2.6"
     rc-resize-observer "^1.0.0"
@@ -14314,10 +14366,10 @@ react-attr-converter@^0.3.1:
   resolved "https://registry.npmjs.org/react-attr-converter/-/react-attr-converter-0.3.1.tgz#4a2abf6d907b7ddae4d862dfec80e489ce41ad6e"
   integrity sha512-dSxo2Mn6Zx4HajeCeQNLefwEO4kNtV/0E682R1+ZTyFRPqxDa5zYb5qM/ocqw9Bxr/kFQO0IUiqdV7wdHw+Cdg==
 
-react-docgen-typescript@^1.20.5:
-  version "1.22.0"
-  resolved "https://registry.npmjs.org/react-docgen-typescript/-/react-docgen-typescript-1.22.0.tgz#00232c8e8e47f4437cac133b879b3e9437284bee"
-  integrity sha512-MPLbF8vzRwAG3GcjdL+OHQlhgtWsLTXs+7uJiHfEeT3Ur7IsZaNYqRTLQ9sj2nB6M6jylcPCeCmH7qbszJmecg==
+react-docgen-typescript-dumi-tmp@^1.22.1-0:
+  version "1.22.1-0"
+  resolved "https://registry.npmjs.org/react-docgen-typescript-dumi-tmp/-/react-docgen-typescript-dumi-tmp-1.22.1-0.tgz#6f452de05c5c114a6e1dd60b34930afaa7ae39a0"
+  integrity sha512-wjuAm1yj+ZZucovow2VF0MXkH2SGZ+squZxfNdnam3oyUbHy/xZaU1ZabCn7rY+13ZFx0/NLda+ZuBgF3g8vBA==
 
 react-dom@16.x:
   version "16.14.0"
@@ -14338,7 +14390,7 @@ react-dom@^17.0.1:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
+react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==

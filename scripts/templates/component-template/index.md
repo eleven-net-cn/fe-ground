@@ -13,8 +13,6 @@ mobile: true
 
 # __name__
 
-<Badge>Author: __author__</Badge>
-
 组件基本介绍...
 
 ## 基本用法
