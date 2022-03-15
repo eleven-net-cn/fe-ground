@@ -3,7 +3,7 @@ title: FE-Ground
 order: 10
 hero:
   # title: FE-Ground
-  desc: 通用的 React 组件库、React Hooks 及 Utils 函数库
+  desc: 通用的 `React Component`、`React Hooks` 及 `Util` 函数<br/><br/>或更多 `SDK`、类库<br/>
   actions:
     - text: 开始使用
       link: /guide
@@ -55,3 +55,9 @@ npm i @e.fe/utils
 # Example
 import { random } from '@e.fe/utils'
 ```
+
+## 快速开发
+
+运行 `yarn run create` 命令，一键生成基础代码，你可以立即参与开发、贡献代码。
+
+![create react component](https://imagev2.xmcdn.com/storages/2ac8-audiofreehighqps/BA/0A/CKwRIRwFBLKeACWo_gDeiKNp.gif)

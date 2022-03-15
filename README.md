@@ -25,17 +25,26 @@ https://fe-ground.eleven.net.cn/
 ## 运行命令
 
 ```bash
-# 在 packages/ 目录下自动生成代码，开发新的 SDK 包可以一键完成
-yarn create-package     # 自动初始化创建新的 package
+yarn run create         # 自动初始化创建 React Component/React Hooks/Util Function/New Package
 
 yarn docs:start         # 启动文档调试、测试 demo
 yarn docs:build         # 打包文档、测试 demo
+
 
 yarn test               # 运行所有 packages jest test
 yarn test:coverage      # 查看所有 packages 测试覆盖率
 
 yarn watch              # 监听所有 packages 编译
 yarn build              # 打包所有 packages
+
+yarn lint               # 运行 eslint
+yarn lint:fix           # 运行 eslint fix
+yarn commit             # 交互式 commit message
+
+yarn pub                # publish packages（发布所有变更的 package）
+# 更多发布命令
+yarn pub from-git       # 从上一次中断的位置继续发布（例如：因无权限而导致的发布失败了，添加权限后可通过此命令继续发布，避免造成版本号再次提升）
+yarn pub from-package   # 将本地领先版本的包全部发布一次（适用场景：某些原因，可能本地的包版本被提升，但未发布，或者，直接手动修改大版本号后发布）
 ```
 
 ## 目录
@@ -122,6 +131,26 @@ yarn build              # 打包所有 packages
 ├── tsconfig.json
 └── yarn.lock             # 请勿手动删除，高危预警！
 ```
+
+## 开发新的 package 或 SDK
+
+> 如果没有特殊需求，通常可以通过 `yarn run create` 来新建。
+
+1. 目录结构方面，你可以有多种选择
+
+   默认生成的是较为通用的目录结构，`__tests__` 单元测试目录和 `src` 目录是平级的，这是编写 SDK 较为常用的方式。
+
+   如果你的 SDK 代码结构是类似 `packages/components`、`packages/utils` 这种，内部的组件、函数相互独立，且数量众多，那么，推荐你参照 components、utils 目录的结构风格，略加修改即可。
+
+2. API 文档
+
+   如果需要编写的文档并不多，那么直接在 `src/README.md` 中编写即可，否则请参照 `packages/components`、`packages/utils` 或阅读 dumi 的文档规则去编写。
+
+## 自动新建
+
+提供了 `yarn run create` 命令一键生成基础代码（React Component/React Hooks/Util Function/New Package），如下图：
+
+![create react component](https://imagev2.xmcdn.com/storages/2ac8-audiofreehighqps/BA/0A/CKwRIRwFBLKeACWo_gDeiKNp.gif)
 
 ## About yarn workspaces
 

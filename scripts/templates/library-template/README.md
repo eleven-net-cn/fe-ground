@@ -1,1 +1,1 @@
-# @e.fe/--library-name--
+# @xmly/__name__

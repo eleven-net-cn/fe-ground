@@ -7,8 +7,20 @@
  * @Author: Eleven
  * @Date: 2021-03-01 09:48:31
  * @Last Modified by: Eleven
- * @Last Modified time: 2021-03-22 10:23:22
+ * @Last Modified time: 2022-03-15 15:40:06
  */
+
+import path from 'path';
+import fs from 'fs-extra';
+
+let packages = fs.readdirSync(path.resolve(__dirname, 'packages'));
+
+if (packages.length) {
+  // 过滤出子包目录
+  packages = packages.filter(dir =>
+    fs.statSync(path.resolve(__dirname, 'packages', dir)).isDirectory(),
+  );
+}
 
 export default {
   // disableTypeCheck: true,
@@ -23,4 +35,8 @@ export default {
       },
     ],
   ],
+  // 各个包之间可能相互有依赖，因此需要指定构建的先后顺序，确保构建时依赖引用不会出错
+  // 需要指定顺序包明确列出，剩余子包会自动读取
+  // https://github.com/umijs/father#pkgs
+  pkgs: [...new Set([...packages])],
 };

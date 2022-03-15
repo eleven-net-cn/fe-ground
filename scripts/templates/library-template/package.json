@@ -1,12 +1,20 @@
 {
-  "name": "@e.fe/--library-name--",
+  "name": "@xmly/__name__",
   "version": "1.0.0",
   "description": "",
-  "homepage": "",
+  "homepage": "http://cft.pages.xmly.work/sunshine/#/__name__/",
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.ximalaya.com/cft/sunshine.git",
+    "directory": "packages/__name__"
+  },
+  "bugs": {
+    "url": "http://gitlab.ximalaya.com/cft/sunshine/issues"
+  },
   "keywords": [],
-  "author": "--username--",
+  "author": "__author__",
   "maintainers": [
-    "--username--"
+    "__xnpmuser__"
   ],
   "license": "ISC",
   "main": "dist/index.js",
@@ -14,8 +22,8 @@
   "typings": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "watch": "cd ../.. && PACKAGE=--library-name-- father-build --watch",
-    "build": "cd ../.. && PACKAGE=--library-name-- father-build",
+    "watch": "cd ../.. && PACKAGE=__name__ father-build --watch",
+    "build": "cd ../.. && PACKAGE=__name__ father-build",
     "test": "umi-test",
     "test:watch": "umi-test --watchAll",
     "test:coverage": "umi-test --coverage",
