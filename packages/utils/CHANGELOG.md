@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/eleven-net-cn/fe-ground/compare/@e.fe/utils@0.0.3...@e.fe/utils@0.0.4) (2022-03-16)
+
+### Performance Improvements
+
+- update compareVersion ([72be07f](https://github.com/eleven-net-cn/fe-ground/commit/72be07fe94dda431f410da5d03abe40d1d2f55cc))
+
 ## [0.0.3](https://github.com/eleven-net-cn/fe-ground/compare/@e.fe/utils@0.0.2...@e.fe/utils@0.0.3) (2021-07-21)
 
 ### Performance Improvements
