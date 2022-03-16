@@ -24,7 +24,7 @@ toc: menu
                 src
                 <ul>
                   <li>
-                    Foo
+                    LayoutPercent
                     <small>React 组件目录，推荐大驼峰，保持组件导出一致</small>
                     <ul>
                       <li>

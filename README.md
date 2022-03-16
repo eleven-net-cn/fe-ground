@@ -63,7 +63,7 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 │   │   ├── node_modules/                 # 子包依赖（如 @babel/runtime-corejs3 等）
 │   │   ├── src/                          # components 源码
 │   │   │   ├── ...
-│   │   │   ├── Foo/                   # 百分比布局容器组件
+│   │   │   ├── LayoutPercent/                   # 百分比布局容器组件
 │   │   │   │   ├── __tests__/                        # jest 单元测试
 │   │   │   │   ├── demos/                             # 测试 demo
 │   │   │   │   │   ├── demo1.style.less                  # 测试代码的样式

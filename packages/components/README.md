@@ -18,7 +18,7 @@ npm i @e.react/components
 
 ```ts
 // 导入组件，示例
-import { Foo } from '@e.react/components';
+import { LayoutPercent } from '@e.react/components';
 
 // 导入样式（所有 components 的样式）
 // 配置按需加载以后，组件的样式会自动按需导入，不必添加此行
