@@ -11,7 +11,7 @@
     "publish": {
       "ignoreChanges": ["docs/**", "dist_docs/**", "patches/**", "scripts/**"],
       "message": "chore: publish",
-      "registry": "https://www.npmjs.com/",
+      "registry": "https://registry.npmjs.org/",
       "access": "public"
     }
   },
