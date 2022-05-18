@@ -3,7 +3,7 @@
  * @Author: Eleven
  * @Date: 2021-03-01 09:51:17
  * @Last Modified by: Eleven
- * @Last Modified time: 2021-03-14 00:11:50
+ * @Last Modified time: 2022-05-18 17:25:31
  */
 
 module.exports = {
@@ -17,6 +17,7 @@ module.exports = {
     '@typescript-eslint/no-invalid-this': 0,
     '@typescript-eslint/no-unused-expressions': 0,
     '@typescript-eslint/consistent-type-imports': 0,
+    '@typescript-eslint/ban-types': 0,
     'import/no-unresolved': 0,
     'no-underscore-dangle': 0,
     'import/no-extraneous-dependencies': 0,

@@ -5,6 +5,3 @@ node_modules
 packages/**/dist
 packages/**/es
 packages/**/lib
-
-**/__tests__/*
-**/demos/*
