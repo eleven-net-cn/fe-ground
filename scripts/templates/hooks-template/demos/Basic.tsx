@@ -1,11 +1,11 @@
 /**
- * title: 
+ * title:
  * desc:
  * defaultShowCode: true
  */
 
 import React from 'react';
-import { __name__ } from '@xmly/hi-hooks';
+import { __name__ } from '@e.react/hi-hooks';
 
 export default () => {
   return (

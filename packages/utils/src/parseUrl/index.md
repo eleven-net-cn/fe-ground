@@ -17,7 +17,7 @@ mobile: false
 ## 基本用法
 
 ```ts
-import { parseUrl } from '@xmly/hi-utils';
+import { parseUrl } from '@e.fe/hi-utils';
 
 const url =
   'https://www.google.com/cfb855beeaed9ebc?test=abc&hello=world#zvyr-dqE9-';
@@ -36,7 +36,7 @@ console.log('query: ', query);
 ## Hash Router 链接
 
 ```ts
-import { parseUrl } from '@xmly/hi-utils';
+import { parseUrl } from '@e.fe/hi-utils';
 
 const url =
   'https://open.ximalaya.com/activities/welfare/#/coupon?test=abc&hello=world';

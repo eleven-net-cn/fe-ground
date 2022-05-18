@@ -16,7 +16,7 @@ mobile: false
 
 ## 基本用法
 
-<code src="./demos/demo1.tsx" />
+<code src="./demos/Basic.tsx" />
 
 ## API
 

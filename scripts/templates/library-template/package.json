@@ -1,20 +1,20 @@
 {
-  "name": "@xmly/__name__",
+  "name": "@e.fe/__name__",
   "version": "1.0.0",
   "description": "",
-  "homepage": "http://cft.pages.xmly.work/sunshine/#/__name__/",
+  "homepage": "https://fe-ground.eleven.net.cn/#/__name__/",
   "repository": {
     "type": "git",
-    "url": "http://gitlab.ximalaya.com/cft/sunshine.git",
+    "url": "https://github.com/eleven-net-cn/fe-ground.git",
     "directory": "packages/__name__"
   },
   "bugs": {
-    "url": "http://gitlab.ximalaya.com/cft/sunshine/issues"
+    "url": "https://github.com/eleven-net-cn/fe-ground/issues"
   },
   "keywords": [],
   "author": "__author__",
   "maintainers": [
-    "__xnpmuser__"
+    "__npmuser__"
   ],
   "license": "ISC",
   "main": "dist/index.js",

@@ -28,6 +28,12 @@ mobile: false
 const result: CompareResult = compareVersion(v1: string, v2: string, seprator?: string);
 ```
 
+#### CompareResult
+
+| 参数   | 说明       | 类型               |
+| ------ | ---------- | ------------------ |
+| result | 比较的结果 | `1` \| `-1` \| `0` |
+
 ## 参数
 
 | 参数     | 说明     | 类型     | 必填 | 默认值      |
@@ -35,11 +41,3 @@ const result: CompareResult = compareVersion(v1: string, v2: string, seprator?: 
 | v1       | 版本号 1 | `string` | 是   | -           |
 | v1       | 版本号 2 | `string` | 是   | -           |
 | seprator | 分隔符   | `string` | 否   | `.`（圆点） |
-
-## 返回值
-
-#### CompareResult
-
-| 参数   | 说明       | 类型               |
-| ------ | ---------- | ------------------ |
-| result | 比较的结果 | `1` \| `-1` \| `0` |

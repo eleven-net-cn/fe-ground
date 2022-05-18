@@ -19,7 +19,7 @@ const userNameGit = exec('git config user.name', {
 const userMailGit = exec('git config user.email', {
   silent: true,
 }).stdout.trim();
-const userNameXnpm = exec('npm whoami --registry=http://www.npmjs.com', {
+const userNameNpm = exec('npm whoami --registry=https://registry.npmjs.org/', {
   silent: true,
 }).stdout.trim();
 
@@ -169,9 +169,9 @@ inquirer
         /__name__/g,
         /__username__/g,
         /__usermail__/g,
-        /__xnpmuser__/g,
+        /__npmuser__/g,
       ],
-      to: [name, userNameGit, userMailGit, userNameXnpm],
+      to: [name, userNameGit, userMailGit, userNameNpm],
       ignore: ['**/node_modules/**'],
     });
 
