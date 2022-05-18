@@ -19,11 +19,12 @@
     "test:coverage": "umi-test --coverage",
     "lint": "eslint \"packages/*/src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"packages/*/src/**/*.{ts,tsx}\"",
-    "pub": "yarn lint && yarn test && lerna publish",
+    "pub": "nr lint && nr test && lerna publish",
     "commit": "git-cz",
     "postinstall": "patch-package"
   },
   "devDependencies": {
+    "@antfu/ni": "^0.16.2",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@commitlint/config-lerna-scopes": "^12.1.4",
@@ -42,7 +43,7 @@
     "commitizen": "^4.2.3",
     "cz-lerna-changelog": "^2.0.3",
     "dayjs": "^1.10.4",
-    "dumi": "^1.1.39",
+    "dumi": "^1.1.40",
     "dumi-theme-mobile": "^1.1.22",
     "eslint": "^7.20.0",
     "father-build": "^1.19.6",

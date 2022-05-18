@@ -44,6 +44,11 @@
     lodash "^4.17.21"
     resize-observer-polyfill "^1.5.0"
 
+"@antfu/ni@^0.16.2":
+  version "0.16.2"
+  resolved "http://plat-registry-npm.mihoyo.com/@antfu%2fni/-/ni-0.16.2.tgz#c740d965ccf7c1ea682811cf199fe0d5f20c6f4f"
+  integrity sha512-HZH4I07EYKU4KZLtUYm/zEmaDIhaq51H/qu45uH1AcUPWqMGbB7evE/TnSr0SGInEA+oQs4Is5Vn/PmQhfuU5w==
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -3585,10 +3590,10 @@
     react-router-dom "5.2.0"
     regenerator-runtime "0.13.5"
 
-"@umijs/preset-dumi@1.1.39":
-  version "1.1.39"
-  resolved "https://registry.npmjs.org/@umijs/preset-dumi/-/preset-dumi-1.1.39.tgz#ff8021bef177ee6d0a64151cb96cca545f53149c"
-  integrity sha512-CMDl5NzyLP1W3JkveJL9aiqT2/F/kZ1oBaPwwM3RhH61xW7zgbPlD1mGYTJ9K5S9WXOJBQBf/5QeM58lhrb0WA==
+"@umijs/preset-dumi@1.1.40":
+  version "1.1.40"
+  resolved "http://plat-registry-npm.mihoyo.com/@umijs%2fpreset-dumi/-/preset-dumi-1.1.40.tgz#2ac29aadce3c1d669fe14a5e8ae95c0ca7442d46"
+  integrity sha512-ovT7fsIRJ+oAaXthOyiftIUJCl0E27EVVBfwoaRN+nHG3I07QeYQ8+4nwEiuDVWC+QjjASmPNssuTBYZdrX6og==
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/generator" "^7.7.2"
@@ -6647,12 +6652,12 @@ dumi-theme-mobile@^1.1.22:
     qrcode.react "^1.0.0"
     umi-hd "^5.0.1"
 
-dumi@^1.1.39:
-  version "1.1.39"
-  resolved "https://registry.npmjs.org/dumi/-/dumi-1.1.39.tgz#7c5f3f975666576ee483f03d81f7d41278185140"
-  integrity sha512-Lq4doyMrZHy4RWefdbnbIoKDjEDwsxfJHmpFnchGO/RptkIeuJm/JGj8TOaprx4eHgDzoU1rmI06F1zz3qboZw==
+dumi@^1.1.40:
+  version "1.1.40"
+  resolved "http://plat-registry-npm.mihoyo.com/dumi/-/dumi-1.1.40.tgz#c6e67cf06977278584931330dc2a5fa3265558e6"
+  integrity sha512-ixIGr2zdcpAOjC7Oa0fGMRewaQIYo57eRRcL2i+8F1mBD7WaFECb9JD9Vrvb2ox7+d4bXcgaOe3K00acpOU0JQ==
   dependencies:
-    "@umijs/preset-dumi" "1.1.39"
+    "@umijs/preset-dumi" "1.1.40"
     umi "^3.0.0"
 
 duplexer2@0.0.2:
