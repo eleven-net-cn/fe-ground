@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const figlet = require('figlet');
 const { exec } = require('shelljs');
 const replace = require('replace-in-file');
+const { when } = require('@e.fe/utils');
 
 // 大驼峰（规则稍微放宽）
 const REG_PASCAL_CASE = /^[A-Z]+[a-z]+([A-Z]+[a-z]+)*$/;
@@ -107,14 +108,22 @@ inquirer
     const libraries = ['component', 'hooks', 'util'];
     const setting = SETTINGS[template];
     const dirTpl = setting.tplDir;
-    const dirTarget =
-      template === 'library'
-        ? `${setting.targetDir}/${name}`
-        : `${setting.targetDir}/src/${name}`;
-    const dirPkg =
-      template === 'library'
-        ? `${setting.targetDir}/${name}`
-        : setting.targetDir;
+    const isLibrary = template === 'library';
+    const dirTarget = when(
+      isLibrary,
+      `${setting.targetDir}/${name}`,
+      `${setting.targetDir}/src/${name}`,
+    );
+    const dirPkg = when(
+      isLibrary,
+      `${setting.targetDir}/${name}`,
+      setting.targetDir,
+    );
+    const dirLibrary = when(
+      isLibrary,
+      name,
+      setting.targetDir.replace('packages/', ''),
+    );
 
     await fs.copy(dirTpl, dirTarget);
 
@@ -178,21 +187,23 @@ inquirer
     console.log('    交互式提交代码（方便生成规范的 CHANGELOG）\n');
     console.log(chalk.green('  yarn watch'));
     console.log('    编译打包（watch 实时编译）\n');
-    console.log(chalk.green(`  yarn watch --${dirPkg}`));
-    console.log(`    编译打包（watch 实时编译），仅编译 ${dirPkg} 目录子包\n`);
+    console.log(chalk.green(`  yarn watch --${dirLibrary}`));
+    console.log(
+      `    编译打包（watch 实时编译），仅编译 ${dirLibrary} 目录子包\n`,
+    );
     console.log(chalk.green('  yarn build'));
     console.log('    编译打包\n');
-    console.log(chalk.green(`  yarn build --${dirPkg}`));
-    console.log(`    编译打包，仅编译 ${dirPkg} 目录子包\n`);
+    console.log(chalk.green(`  yarn build --${dirLibrary}`));
+    console.log(`    编译打包，仅编译 ${dirLibrary} 目录子包\n`);
     console.log(chalk.green('  yarn test'));
     console.log('    运行 Jest 单元测试\n');
-    console.log(chalk.green(`  yarn test --${dirPkg}`));
-    console.log(`    运行 Jest 单元测试，仅运行 ${dirPkg} 目录子包\n`);
-    console.log(chalk.green('  yarn test:watch'));
+    console.log(chalk.green(`  yarn test --${dirLibrary}`));
+    console.log(`    运行 Jest 单元测试，仅运行 ${dirLibrary} 目录子包\n`);
+    console.log(chalk.green('  yarn test --watch'));
     console.log('    运行 Jest 单元测试（watch 实时编译）\n');
-    console.log(chalk.green(`  yarn test:watch --${dirPkg}`));
+    console.log(chalk.green(`  yarn test --watch --${dirLibrary}`));
     console.log(
-      `    运行 Jest 单元测试（watch 实时编译），仅运行 ${dirPkg} 目录子包\n`,
+      `    运行 Jest 单元测试（watch 实时编译），仅运行 ${dirLibrary} 目录子包\n`,
     );
 
     console.log(
