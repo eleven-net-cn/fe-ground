@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/eleven-net-cn/fe-ground/compare/@e.react/hooks@0.0.4...@e.react/hooks@0.0.5) (2022-05-24)
+
+**Note:** Version bump only for package @e.react/hooks
+
 ## [0.0.4](https://github.com/eleven-net-cn/fe-ground/compare/@e.react/hooks@0.0.3...@e.react/hooks@0.0.4) (2022-05-18)
 
 **Note:** Version bump only for package @e.react/hooks

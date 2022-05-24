@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/eleven-net-cn/fe-ground/compare/@e.react/components@0.0.5...@e.react/components@0.0.6) (2022-05-24)
+
+**Note:** Version bump only for package @e.react/components
+
 ## [0.0.5](https://github.com/eleven-net-cn/fe-ground/compare/@e.react/components@0.0.4...@e.react/components@0.0.5) (2022-03-16)
 
 **Note:** Version bump only for package @e.react/components
