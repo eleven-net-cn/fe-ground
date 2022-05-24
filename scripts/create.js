@@ -165,12 +165,7 @@ inquirer
 
     await replace({
       files: [path.resolve(__dirname, '..', dirTarget, '**/*'), ...entries],
-      from: [
-        /__name__/g,
-        /__username__/g,
-        /__usermail__/g,
-        /__npmuser__/g,
-      ],
+      from: [/__name__/g, /__username__/g, /__usermail__/g, /__npmuser__/g],
       to: [name, userNameGit, userMailGit, userNameNpm],
       ignore: ['**/node_modules/**'],
     });
@@ -178,37 +173,27 @@ inquirer
     console.log();
     console.log(figlet.textSync('sunshine'));
 
-    console.log(chalk.cyan('\n根目录提供以下命令：\n'));
+    console.log(chalk.cyan('\n你可能会使用到以下命令：\n'));
     console.log(chalk.green('  yarn commit'));
     console.log('    交互式提交代码（方便生成规范的 CHANGELOG）\n');
     console.log(chalk.green('  yarn watch'));
     console.log('    编译打包（watch 实时编译）\n');
+    console.log(chalk.green(`  yarn watch --${dirPkg}`));
+    console.log(`    编译打包（watch 实时编译），仅编译 ${dirPkg} 目录子包\n`);
     console.log(chalk.green('  yarn build'));
     console.log('    编译打包\n');
+    console.log(chalk.green(`  yarn build --${dirPkg}`));
+    console.log(`    编译打包，仅编译 ${dirPkg} 目录子包\n`);
     console.log(chalk.green('  yarn test'));
     console.log('    运行 Jest 单元测试\n');
-    console.log(chalk.green('  yarn test:coverage'));
-    console.log('    查看 Jest 单元测试覆盖率\n');
-    console.log(chalk.green('  yarn lint'));
-    console.log('    ESLint 格式化代码\n');
-    console.log(chalk.green('  yarn lint:fix'));
-    console.log('    ESLint 格式化代码（自动 fix）\n');
-
-    console.log(
-      `${chalk.magenta(`cd ${dirPkg}`)}, ${chalk.cyan(
-        'package 内提供以下命令独立运行：\n',
-      )}`,
-    );
-    console.log(chalk.green('  yarn watch'));
-    console.log('    编译打包（watch 实时编译）\n');
-    console.log(chalk.green('  yarn build'));
-    console.log('    编译打包\n');
-    console.log(chalk.green('  yarn test'));
-    console.log('    运行 Jest 单元测试\n');
+    console.log(chalk.green(`  yarn test --${dirPkg}`));
+    console.log(`    运行 Jest 单元测试，仅运行 ${dirPkg} 目录子包\n`);
     console.log(chalk.green('  yarn test:watch'));
     console.log('    运行 Jest 单元测试（watch 实时编译）\n');
-    console.log(chalk.green('  yarn test:coverage'));
-    console.log('    查看 Jest 单元测试覆盖率\n');
+    console.log(chalk.green(`  yarn test:watch --${dirPkg}`));
+    console.log(
+      `    运行 Jest 单元测试（watch 实时编译），仅运行 ${dirPkg} 目录子包\n`,
+    );
 
     console.log(
       chalk.cyan(

@@ -19,13 +19,8 @@
   "typings": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "watch": "cd ../.. && PACKAGE=utils father-build --watch",
-    "build": "cd ../.. && PACKAGE=utils father-build",
-    "test": "umi-test",
-    "test:watch": "umi-test --watchAll",
-    "test:coverage": "umi-test --coverage",
-    "prepublishOnly": "yarn build",
-    "prepare": "cd .. && yarn patch-package"
+    "prepublishOnly": "cd .. && nr build --utils",
+    "prepare": "cd .. && nr patch-package"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.13.7"
