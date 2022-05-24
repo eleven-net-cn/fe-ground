@@ -2,13 +2,15 @@
 
 通用的 React 组件库、React Hooks 及 Utils 函数库
 
-标准的 Lerna Monorepo TypeScript 结构，支持 React 组件库、React Hooks 类库以及其它更多 TyepScript 类库开发，可直接从 Template 创建自己的项目。
+标准的 Lerna Monorepo TypeScript 结构，支持 React 组件库、React Hooks 类库以及其它更多 TypeScript 类库开发。
+
+推荐按需从 Template 创建或 fork 自己的项目。
 
 ## Documentation
 
 https://fe-ground.eleven.net.cn/
 
-## 技术架构
+## Technology
 
 - lerna + yarn workspaces 的 `monorepo` 多包结构 —— yarn workspaces 处理多包的依赖，其它的交给 lerna
 - [umijs dumi](https://d.umijs.org/zh-CN/) 集中编译所有包的 doc 文档、测试 demo
@@ -22,7 +24,7 @@ https://fe-ground.eleven.net.cn/
     - [Support for Yarn workspaces/monorepos](https://github.com/ds300/patch-package/issues/42)
     - [Thoughts on yarn workspaces support](https://github.com/ds300/patch-package/issues/132)
 
-## 运行命令
+## Command
 
 ```bash
 yarn run create         # 自动初始化创建 React Component/React Hooks/Util Function/New Package
@@ -47,7 +49,7 @@ yarn pub from-git       # 从上一次中断的位置继续发布（例如：因
 yarn pub from-package   # 将本地领先版本的包全部发布一次（适用场景：某些原因，可能本地的包版本被提升，但未发布，或者，直接手动修改大版本号后发布）
 ```
 
-## 目录
+## Construction
 
 ```bash
 ├── .umi/                 # umijs 缓存目录（dumi 文档工具基于 umijs 生态）
@@ -65,10 +67,10 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 │   │   │   ├── ...
 │   │   │   ├── LayoutPercent/                   # 百分比布局容器组件
 │   │   │   │   ├── __tests__/                        # jest 单元测试
-│   │   │   │   ├── demos/                             # 测试 demo
+│   │   │   │   ├── demos/                            # 测试 demo
 │   │   │   │   │   ├── demo1.style.less                  # 测试代码的样式
 │   │   │   │   │   └── demo1.tsx                         # demo 测试
-│   │   │   │   ├── style/                             # 组件样式
+│   │   │   │   ├── style/                            # 组件样式
 │   │   │   │   │   ├── index.less                        # 组件样式入口（less）
 │   │   │   │   │   └── index.ts                          # 组件样式入口（ts）
 │   │   │   │   ├── index.md                          # API 文档
@@ -88,7 +90,7 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 │   │   │   ├── ...
 │   │   │   ├── useCountDown/                   # 倒计时 hooks
 │   │   │   │   ├── __tests__/                        # jest 单元测试
-│   │   │   │   ├── demos/                             # 测试 demo
+│   │   │   │   ├── demos/                            # 测试 demo
 │   │   │   │   ├── index.md                          # API 文档
 │   │   │   │   └── index.ts                          # 源码
 │   │   │   ├── ...
@@ -104,7 +106,7 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 │       │   ├── ...
 │       │   ├── compareVersion/                 # 版本号比较
 │       │   │   ├── __tests__/                        # jest 单元测试
-│       │   │   ├── demos/                             # 测试 demo
+│       │   │   ├── demos/                            # 测试 demo
 │       │   │   ├── index.md                          # API 文档
 │       │   │   └── index.ts                          # 源码
 │       │   ├── ...
@@ -132,7 +134,7 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 └── yarn.lock             # 请勿手动删除，高危预警！
 ```
 
-## 开发新的 package 或 SDK
+## Create New Package
 
 > 如果没有特殊需求，通常可以通过 `yarn run create` 来新建。
 
@@ -146,9 +148,9 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 
    如果需要编写的文档并不多，那么直接在 `src/README.md` 中编写即可，否则请参照 `packages/components`、`packages/utils` 或阅读 dumi 的文档规则去编写。
 
-## 自动新建
+## Auto Create
 
-提供了 `yarn run create` 命令一键生成基础代码（React Component/React Hooks/Util Function/New Package），如下图：
+提供了 `yarn run create` 命令一键生成基础代码（React Component/React Hooks/Util Function/New Package），如图：
 
 ![create react component](https://imagev2.xmcdn.com/storages/2ac8-audiofreehighqps/BA/0A/CKwRIRwFBLKeACWo_gDeiKNp.gif)
 
