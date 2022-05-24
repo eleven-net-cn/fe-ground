@@ -26,7 +26,8 @@ https://fe-ground.eleven.net.cn/
 
 ## Command
 
-> 运行 test/watch/build 命令时，参数传入子包目录名称，即可仅运行该子包。例如：运行 `yarn build --components`，仅会打包 components 目录下的子包。
+> 运行 test/watch/build 命令时，参数传入子包目录名称，即可仅运行该子包。  
+> 例如：运行 `yarn build --components`，仅会打包 components 目录下的子包。
 
 ```bash
 yarn run create         # 自动初始化创建 React Component/React Hooks/Util Function/New Package
