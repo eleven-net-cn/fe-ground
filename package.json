@@ -44,7 +44,7 @@
     "cross-spawn": "^7.0.3",
     "cz-lerna-changelog": "^2.0.3",
     "dayjs": "^1.10.4",
-    "dumi": "^1.1.40",
+    "dumi": "^1.1.42",
     "dumi-theme-mobile": "^1.1.22",
     "eslint": "^7.20.0",
     "father-build": "^1.19.6",
