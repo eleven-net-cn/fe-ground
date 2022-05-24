@@ -10,9 +10,9 @@
     "branch": "master"
   },
   "scripts": {
-    "create": "node ./scripts/create.js",
     "docs:start": "dumi dev",
     "docs:build": "dumi build",
+    "create": "node ./scripts/create.js",
     "watch": "father-build --watch",
     "build": "father-build",
     "test": "umi-test -u",
