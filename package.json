@@ -37,6 +37,7 @@
     "@types/react-dom": "^17.0.1",
     "@umijs/fabric": "^2.5.6",
     "@umijs/test": "^3.3.7",
+    "@zhangqc/plugin-dumi-vue": "^1.0.5",
     "antd": "^4.12.3",
     "babel-plugin-import": "^1.13.3",
     "babel-plugin-styled-components": "^1.12.0",

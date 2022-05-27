@@ -35,6 +35,7 @@ export default defineConfig({
     // includes: [
     //   'docs',
     // ],
+    previewLangs: ['jsx', 'tsx', 'html'],
   },
   navs: [
     null,
@@ -47,6 +48,7 @@ export default defineConfig({
       path: 'https://github.com/eleven-net-cn/fe-ground/issues',
     },
   ],
+  plugins: ['@zhangqc/plugin-dumi-vue'],
   extraBabelPlugins: [
     [
       'babel-plugin-import',
