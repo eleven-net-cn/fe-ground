@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const figlet = require('figlet');
 const { exec } = require('shelljs');
 const replace = require('replace-in-file');
-const { when } = require('@e.fe/utils');
 
 // 大驼峰（规则稍微放宽）
 const REG_PASCAL_CASE = /^[A-Z]+[a-z]+([A-Z]+[a-z]+)*$/;
@@ -109,22 +108,15 @@ inquirer
     const setting = SETTINGS[template];
     const dirTpl = setting.tplDir;
     const isLibrary = template === 'library';
-    const dirTarget = when(
-      isLibrary,
-      `${setting.targetDir}/${name}`,
-      `${setting.targetDir}/src/${name}`,
-    );
-    const dirPkg = when(
-      isLibrary,
-      `${setting.targetDir}/${name}`,
-      setting.targetDir,
-    );
-    const dirLibrary = when(
-      isLibrary,
-      name,
-      setting.targetDir.replace('packages/', ''),
-    );
-
+    const dirTarget = isLibrary
+      ? `${setting.targetDir}/${name}`
+      : `${setting.targetDir}/src/${name}`;
+    const dirPkg = isLibrary
+      ? `${setting.targetDir}/${name}`
+      : setting.targetDir;
+    const dirLibrary = isLibrary
+      ? name
+      : setting.targetDir.replace('packages/', '');
     await fs.copy(dirTpl, dirTarget);
 
     if (libraries.includes(template)) {
@@ -213,12 +205,11 @@ inquirer
     );
     console.log(
       chalk.green(
-        `  yarn docs:start    ${chalk.white('运行 Demo 测试及文档')}\n`,
+        `  yarn docs:start    ${chalk.white('运行 Demo 测试及文档')}`,
       ),
     );
     console.log(
-      chalk.green(
-        `  yarn test:watch    ${chalk.white('运行 Jest 单元测试')}\n`,
-      ),
+      chalk.green(`  yarn test:watch    ${chalk.white('运行 Jest 单元测试')}`),
     );
+    console.log();
   });
