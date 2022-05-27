@@ -182,7 +182,7 @@ inquirer
     console.log();
     console.log(figlet.textSync('sunshine'));
 
-    console.log(chalk.cyan('\n你可能会使用到以下命令：\n'));
+    console.log(chalk.cyan('\n提供以下运行命令：\n'));
     console.log(chalk.green('  yarn commit'));
     console.log('    交互式提交代码（方便生成规范的 CHANGELOG）\n');
     console.log(chalk.green('  yarn watch'));
@@ -199,9 +199,9 @@ inquirer
     console.log('    运行 Jest 单元测试\n');
     console.log(chalk.green(`  yarn test --${dirLibrary}`));
     console.log(`    运行 Jest 单元测试，仅运行 ${dirLibrary} 目录子包\n`);
-    console.log(chalk.green('  yarn test --watch'));
+    console.log(chalk.green('  yarn test:watch'));
     console.log('    运行 Jest 单元测试（watch 实时编译）\n');
-    console.log(chalk.green(`  yarn test --watch --${dirLibrary}`));
+    console.log(chalk.green(`  yarn test:watch --${dirLibrary}`));
     console.log(
       `    运行 Jest 单元测试（watch 实时编译），仅运行 ${dirLibrary} 目录子包\n`,
     );
@@ -214,6 +214,11 @@ inquirer
     console.log(
       chalk.green(
         `  yarn docs:start    ${chalk.white('运行 Demo 测试及文档')}\n`,
+      ),
+    );
+    console.log(
+      chalk.green(
+        `  yarn test:watch    ${chalk.white('运行 Jest 单元测试')}\n`,
       ),
     );
   });

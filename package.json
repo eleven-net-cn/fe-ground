@@ -16,6 +16,8 @@
     "watch": "node scripts/build.js --watch",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js -u",
+    "test:watch": "node scripts/test.js --watch",
+    "test:coverage": "node scripts/test.js --coverage",
     "lint": "eslint \"packages/*/src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"packages/*/src/**/*.{ts,tsx}\"",
     "pub": "nr lint && nr test && lerna publish",

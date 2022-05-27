@@ -36,12 +36,12 @@ yarn docs:start         # 启动文档调试、测试 demo
 yarn docs:build         # 打包文档、测试 demo
 
 yarn test               # 运行所有 packages jest test
-yarn test --watch       # 运行所有 packages jest test
-yarn test --coverage    # 查看所有 packages 测试覆盖率
+yarn test:watch         # 运行所有 packages jest test，watch 模式
+yarn test:coverage      # 查看所有 packages 测试覆盖率
 # 更多命令（直接传子包目录名，即可单独运行子包，示例如下）
 # yarn test --components              # 仅运行 components 目录子包 jest test
-# yarn test --components --watch      # 仅运行 components 目录子包 jest test
-# yarn test --components --coverage   # 仅查看 components 目录子包测试覆盖率
+# yarn test:watch --components        # 仅运行 components 目录子包 jest test，watch 模式
+# yarn test:coverage --components     # 仅查看 components 目录子包测试覆盖率
 
 yarn watch              # 监听所有 packages 编译
 # 更多命令（直接传子包目录名，即可单独编译子包）
