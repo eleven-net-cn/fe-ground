@@ -26,9 +26,6 @@ https://fe-ground.eleven.net.cn/
 
 ## Command
 
-> 运行 test/watch/build 命令时，参数传入子包目录名称，即可仅运行该子包。  
-> 例如：运行 `yarn build --components`，仅会打包 components 目录下的子包。
-
 ```bash
 yarn run create         # 自动初始化创建 React Component/React Hooks/Util Function/New Package
 
@@ -64,6 +61,12 @@ yarn pub                # publish packages（发布所有变更的 package）
 yarn pub from-git       # 从上一次中断的位置继续发布（例如：因无权限而导致的发布失败了，添加权限后可通过此命令继续发布，避免造成版本号再次提升）
 yarn pub from-package   # 将本地领先版本的包全部发布一次（适用场景：某些原因，可能本地的包版本被提升，但未发布，或者，直接手动修改大版本号后发布）
 ```
+
+封装了运行脚本扩展支持更多参数，运行 test/watch/build 命令时，参数传入子包目录名称，即可仅运行该子包，以提升某些场景下的编译性能及操作便利。
+
+例如：运行 `yarn build --components`，仅会打包 components 目录下的子包。
+
+仅在十分确定某个改动只会影响某个子包时，才单独运行、调试某个子包。一般情况下不需要担心编译性能，因此可以放心编译全部包。
 
 ## Construction
 
