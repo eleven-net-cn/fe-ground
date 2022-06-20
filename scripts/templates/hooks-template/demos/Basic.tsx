@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { __name__ } from '@e.react/hi-hooks';
+import { __name__ } from '@e.react/hooks';
 
 export default () => {
   return (

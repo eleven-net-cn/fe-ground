@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { __name__ } from '@e.fe/hi-utils';
+import { __name__ } from '@e.fe/utils';
 
 export default () => {
   return <>基本用法</>;
