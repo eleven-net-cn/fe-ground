@@ -2,28 +2,19 @@
  * father-build: https://github.com/umijs/father
  *  - 支持 lerna 结构，根目录配置 .fatherrc.ts，即可运行编译所有 package
  *  - package 目录配置的 .fatherrc.ts 会继承根目录的 .fatherrc.ts，
- *    因此，可以在单个 package 下新建 .fatherrc.ts 去添加独有的配置
- *
- * @Author: Eleven
- * @Date: 2021-03-01 09:48:31
- * @Last Modified by: Eleven
- * @Last Modified time: 2022-03-15 15:40:06
+ *    可以在单个 package 下新建 .fatherrc.ts 去添加独有的配置
  */
 
 import path from 'path';
 import fs from 'fs-extra';
 
-let packages = fs.readdirSync(path.resolve(__dirname, 'packages'));
-
-if (packages.length) {
-  // 过滤出子包目录
-  packages = packages.filter(dir =>
+const files = fs.readdirSync(path.resolve(__dirname, 'packages'));
+const packages =
+  files?.filter(dir =>
     fs.statSync(path.resolve(__dirname, 'packages', dir)).isDirectory(),
-  );
-}
+  ) ?? [];
 
 export default {
-  // disableTypeCheck: true,
   esm: 'rollup',
   cjs: 'rollup',
   runtimeHelpers: true,

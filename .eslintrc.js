@@ -1,11 +1,6 @@
 /*
  * https://cn.eslint.org/docs/user-guide/configuring
- * @Author: Eleven
- * @Date: 2021-03-01 09:51:17
- * @Last Modified by: Eleven
- * @Last Modified time: 2022-05-18 17:25:31
  */
-
 module.exports = {
   extends: [
     // https://github.com/umijs/fabric

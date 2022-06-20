@@ -1,10 +1,5 @@
 /*
- * @Desc: dumi 文档编译配置
- *  - dumi config：https://d.umijs.org/zh-CN/config
- * @Author: Eleven
- * @Date: 2020-12-10 09:42:36
- * @Last Modified by: Eleven
- * @Last Modified time: 2022-03-15 16:58:49
+ * dumi config：https://d.umijs.org/zh-CN/config
  */
 
 import { defineConfig } from 'dumi';
