@@ -166,7 +166,12 @@ inquirer
 
     await replace({
       files: [path.resolve(__dirname, '..', dirTarget, '**/*'), ...entries],
-      from: [/__name__/g, /__username__/g, /__usermail__/g, /__npmuser__/g],
+      from: [
+        /__name__|--name--/g,
+        /__username__|--username--/g,
+        /__usermail__|--usermail--/g,
+        /__npmuser__|--npmuser--/g,
+      ],
       to: [name, userNameGit, userMailGit, userNameNpm],
       ignore: ['**/node_modules/**'],
     });

@@ -10,7 +10,7 @@ group:
 mobile: false
 ---
 
-# __name__
+# --name--
 
 函数基本介绍...
 

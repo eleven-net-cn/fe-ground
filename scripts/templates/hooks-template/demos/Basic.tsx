@@ -4,7 +4,6 @@
  * defaultShowCode: true
  */
 
-import React from 'react';
 import { __name__ } from '@e.react/hooks';
 
 export default () => {
