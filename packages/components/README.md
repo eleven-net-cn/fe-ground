@@ -1,5 +1,11 @@
 # @e.react/components
 
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+
+[npm-url]: https://npmjs.org/package/@e.react/components
+[downloads-image]: https://img.shields.io/npm/dt/@e.react/components.svg
+[npm-image]: https://img.shields.io/npm/v/@e.react/components.svg
+
 `React` 组件库，非 UI 框架/库，囊括的组件通常包含 UI、交互等复杂逻辑。
 
 ## Documentation

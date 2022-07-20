@@ -1,5 +1,11 @@
 # @e.fe/utils
 
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+
+[npm-url]: https://npmjs.org/package/@e.fe/utils
+[downloads-image]: https://img.shields.io/npm/dt/@e.fe/utils.svg
+[npm-image]: https://img.shields.io/npm/v/@e.fe/utils.svg
+
 通用工具函数库，提取常用的工具方法、通用逻辑。
 
 ## Documentation
