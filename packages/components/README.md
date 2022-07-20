@@ -46,18 +46,20 @@ import '@e.react/components/lib/index.css';
 2. 在 babel 配置的 plugins 中添加配置（建议复制过去使用，手敲容易错漏）
 
    ```json
-   plugins: [
-     [
-       'babel-plugin-import',
-       {
-         libraryName: '@e.react/components',
-         libraryDirectory: 'es',
-         camel2DashComponentName: false,
-         style: true,
-       },
-       '@e.react/components'
-     ],
-   ]
+   {
+     "plugins": [
+       [
+         "babel-plugin-import",
+         {
+           "libraryName": "@e.react/components",
+           "libraryDirectory": "es",
+           "camel2DashComponentName": false,
+           "style": true
+         },
+         "@e.react/components"
+       ]
+     ]
+   }
    ```
 
    **配置注意：**
