@@ -171,7 +171,7 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 
 提供了 `yarn run create` 命令一键生成基础代码（React Component/React Hooks/Util Function/New Package），如图：
 
-![create react component](https://imagev2.xmcdn.com/storages/2ac8-audiofreehighqps/BA/0A/CKwRIRwFBLKeACWo_gDeiKNp.gif)
+![auto create](https://static.eleven.net.cn/images/fe-ground/auto_create.gif)
 
 ## About yarn workspaces
 
