@@ -183,9 +183,9 @@ yarn pub from-package   # 将本地领先版本的包全部发布一次（适用
 
    ```bash
    # 若执行命令提示类似的错误 ☞ error An unexpected error occurred: "expected workspace package to exist for \"@babel/template\"".
-   # 请尝试将 yarn 降级到 v1.18.0，
+   # 请尝试将 yarn 降级到 v1.18.0，或 npx yarn@1.19.1
    # https://github.com/yarnpkg/yarn/issues/7807
-   yarn workspace @e.fe/utils add lodash
+   npx yarn@1.19.1 workspace @e.fe/utils add lodash
    ```
 
    若无法使用上述方式安装，可以在子包的 `package.json` 中填写依赖，到根目录执行 `yarn` 安装。
