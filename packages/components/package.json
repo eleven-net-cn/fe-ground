@@ -1,0 +1,45 @@
+{
+  "name": "@e.react/components",
+  "version": "0.0.7",
+  "description": "通用 React Components",
+  "homepage": "https://fe-ground.eleven.net.cn/#/components/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-net-cn/fe-ground.git",
+    "directory": "packages/components"
+  },
+  "keywords": [],
+  "author": "Eleven <master@eleven.net.cn>",
+  "maintainers": [
+    "eleven.xi <master@eleven.net.cn>"
+  ],
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "cd .. && nr build --components",
+    "prepare": "cd .. && nr patch-package"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.13.7"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.7",
+    "postinstall-prepare": "^2.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "es",
+    "lib"
+  ],
+  "gitHead": "4be5e79555539af36fa8c31bac04216ce787af01"
+}

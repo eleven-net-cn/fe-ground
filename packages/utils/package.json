@@ -1,0 +1,47 @@
+{
+  "name": "@e.fe/utils",
+  "version": "0.0.8",
+  "description": "通用工具函数",
+  "homepage": "https://fe-ground.eleven.net.cn/#/utils/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-net-cn/fe-ground.git",
+    "directory": "packages/utils"
+  },
+  "keywords": [],
+  "author": "Eleven <master@eleven.net.cn>",
+  "maintainers": [
+    "eleven.xi <master@eleven.net.cn>"
+  ],
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "cd .. && nr build --utils",
+    "prepare": "cd .. && nr patch-package"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.13.7"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.7",
+    "postinstall-prepare": "^2.0.0",
+    "styled-components": "^5.2.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "dist"
+  ],
+  "gitHead": "4be5e79555539af36fa8c31bac04216ce787af01"
+}

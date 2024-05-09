@@ -1,0 +1,46 @@
+{
+  "name": "@e.fe/__name__",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://fe-ground.eleven.net.cn/#/__name__/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-net-cn/fe-ground.git",
+    "directory": "packages/__name__"
+  },
+  "bugs": {
+    "url": "https://github.com/eleven-net-cn/fe-ground/issues"
+  },
+  "keywords": [],
+  "author": "__username__",
+  "maintainers": [
+    "__npmuser__"
+  ],
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "cd .. && nr build --__name__",
+    "prepare": "cd .. && nr patch-package"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.13.9"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "postinstall-prepare": "^2.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "dist"
+  ]
+}

@@ -1,0 +1,50 @@
+diff --git a/node_modules/father-build/lib/build.js b/node_modules/father-build/lib/build.js
+index 0ca96ed..d254687 100644
+--- a/node_modules/father-build/lib/build.js
++++ b/node_modules/father-build/lib/build.js
+@@ -100,9 +100,11 @@ function validateBundleOpts(bundleOpts, {
+ }) {
+   if (bundleOpts.runtimeHelpers) {
+     const pkgPath = (0, _path.join)(cwd, 'package.json');
+-    assert.ok((0, _fs.existsSync)(pkgPath), `@babel/runtime dependency is required to use runtimeHelpers`);
++    // assert.ok((0, _fs.existsSync)(pkgPath), `@babel/runtime dependency is required to use runtimeHelpers`);
++    assert.ok((0, _fs.existsSync)(pkgPath), `@babel/runtime-corejs3 dependency is required to use runtimeHelpers`);
+     const pkg = JSON.parse((0, _fs.readFileSync)(pkgPath, 'utf-8'));
+-    assert.ok((pkg.dependencies || {})['@babel/runtime'], `@babel/runtime dependency is required to use runtimeHelpers`);
++    // assert.ok((pkg.dependencies || {})['@babel/runtime'], `@babel/runtime dependency is required to use runtimeHelpers`);
++    assert.ok((pkg.dependencies || {})['@babel/runtime-corejs3'], `@babel/runtime-corejs3 dependency is required to use runtimeHelpers`);
+   }
+ 
+   if (bundleOpts.cjs && bundleOpts.cjs.lazy && bundleOpts.cjs.type === 'rollup') {
+diff --git a/node_modules/father-build/lib/getBabelConfig.js b/node_modules/father-build/lib/getBabelConfig.js
+index d9ec6f8..8420680 100644
+--- a/node_modules/father-build/lib/getBabelConfig.js
++++ b/node_modules/father-build/lib/getBabelConfig.js
+@@ -67,7 +67,12 @@ function _default(opts) {
+         loose: true
+       }], ...(runtimeHelpers ? [[require.resolve('@babel/plugin-transform-runtime'), {
+         useESModules: isBrowser && type === 'esm',
+-        version: require('@babel/runtime/package.json').version
++        // version: require('@babel/runtime/package.json').version
++        version: require('@babel/runtime-corejs3/package.json').version,
++        corejs: {
++          version: 3,
++          proposals: true,
++        },
+       }]] : []), ...(process.env.COVERAGE ? [require.resolve('babel-plugin-istanbul')] : [])]
+     },
+     isBrowser
+diff --git a/node_modules/father-build/lib/getRollupConfig.js b/node_modules/father-build/lib/getRollupConfig.js
+index f96aa25..6c901b5 100644
+--- a/node_modules/father-build/lib/getRollupConfig.js
++++ b/node_modules/father-build/lib/getRollupConfig.js
+@@ -105,7 +105,8 @@ function _default(opts) {
+   } catch (e) {} // cjs 不给浏览器用，所以无需 runtimeHelpers
+ 
+ 
+-  const runtimeHelpers = type === 'cjs' ? false : runtimeHelpersOpts;
++  // const runtimeHelpers = type === 'cjs' ? false : runtimeHelpersOpts;
++  const runtimeHelpers = runtimeHelpersOpts;
+ 
+   const babelOpts = _objectSpread(_objectSpread({}, (0, _getBabelConfig.default)({
+     type,
