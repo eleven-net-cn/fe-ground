@@ -1362,8 +1362,8 @@
 
 "@commitlint/config-lerna-scopes@^12.1.4":
   version "12.1.4"
-  resolved "https://registry.nlark.com/@commitlint/config-lerna-scopes/download/@commitlint/config-lerna-scopes-12.1.4.tgz#af6786d2a479eb4c90838782368bb3958547327a"
-  integrity sha1-r2eG0qR560yQg4eCNouzlYVHMno=
+  resolved "https://registry.npmmirror.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-12.1.4.tgz#af6786d2a479eb4c90838782368bb3958547327a"
+  integrity sha512-D/VqvATs8fYi2CFpFdjLYeOHGm/KkxUSehGqwIPJfYXHHua19V5UqmUOeXTNAJaD+bTpiHvoBTK75NcmWpBQSg==
   dependencies:
     globby "^11.0.1"
     import-from "3.0.0"
