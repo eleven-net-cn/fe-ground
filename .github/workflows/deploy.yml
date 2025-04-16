@@ -22,7 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-outs your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
       - name: Setup node
@@ -38,6 +38,8 @@ jobs:
 
       - name: Build
         run: |
+          yarn config set strict-ssl false
+          yarn config set "npmRegistryServer" "http://registry.npmjs.org"
           yarn
           yarn docs:build
 
