@@ -4,13 +4,11 @@
 
 import { defineConfig } from 'dumi';
 
-const isDev = process.env.NODE_ENV === 'development';
-const publicPath = isDev ? '/' : `//fe-ground.eleven.net.cn/`;
 const LOGO = 'https://avatars.githubusercontent.com/u/20358391';
 
 export default defineConfig({
   // base: '/fe-ground/', // 没有部署在域名映射的根目录，必须要添加访问的路径作为 base
-  publicPath,
+  // publicPath: '/',
   mode: 'site',
   title: 'FE-Ground',
   favicon: LOGO,

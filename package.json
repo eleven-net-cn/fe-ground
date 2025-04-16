@@ -11,8 +11,7 @@
   },
   "scripts": {
     "docs:start": "dumi dev",
-    "docs:build": "dumi build && nr cname",
-    "cname": "echo 'fe-ground.eleven.net.cn' > dist_docs/CNAME",
+    "docs:build": "dumi build",
     "create": "node scripts/create.js",
     "watch": "node scripts/build.js --watch",
     "build": "node scripts/build.js",
