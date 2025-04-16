@@ -7,7 +7,6 @@ import { defineConfig } from 'dumi';
 const LOGO = 'https://avatars.githubusercontent.com/u/20358391';
 
 export default defineConfig({
-  publicPath: process.env.NODE_ENV === 'development' ? '/' : '//eleven-net-cn.github.io/fe-ground/',
   mode: 'site',
   title: 'FE-Ground',
   favicon: LOGO,
