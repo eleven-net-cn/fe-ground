@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-outs your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          persist-credentials: true
 
       - name: Setup node
         uses: actions/setup-node@v3
@@ -49,3 +52,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist_docs
+          REPOSITORY_NAME: eleven-net-cn/fe-ground
+          CLEAN: true
